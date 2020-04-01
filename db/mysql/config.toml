@@ -1,0 +1,12 @@
+
+[robotcates]
+
+[robotcates.bus]
+
+server = "10.111.21.25"
+username="tcdeveluser"
+userpass="PaSSTcdEVelU321!#"
+connection_max = 5000
+enabled = true
+
+[robotcates.hotel]

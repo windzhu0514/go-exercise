@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/code/librsa/librsasign.h
+string
+-
+
+/root/code/librsa/rsaDemo.cpp
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+librsasign.h
+/root/code/librsa/librsasign.h
+

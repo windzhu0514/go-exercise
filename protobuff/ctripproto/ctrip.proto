@@ -1,0 +1,17 @@
+syntax = "proto3";
+ 
+package ctripproto;
+ 
+message Context {
+    string Key = 1;
+    string Value = 2;
+}
+ 
+message Body {
+   repeated Context context =1;
+   string deviceToken =2 ;
+   string password =3 ;
+   int32 serviceVersion = 4;
+   string uUID =5 ;
+   string userId =6 ;
+}

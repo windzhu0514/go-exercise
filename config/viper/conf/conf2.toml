@@ -1,0 +1,62 @@
+[Common]
+# 订单中心URL
+OrdercenterURL2="http://121.40.106.209:9110/"
+
+# 本程序监听端口
+ListenPort=9113
+
+# 重试次数
+ReTryTimes=3
+
+# redis连接
+RedisIPPort="127.0.0.1:6379"
+
+# 是否禁用无效线路
+DisableInvalidLine=false
+
+# 数据不写入数据库
+IsNoDB=true
+
+[QueryOptions]
+# 预查询的天数
+QueryPreDays=3
+
+TotalQueryTimes=1
+
+# 每轮定时筛选间隔 单位 天
+TimingFilterInterval=30
+
+# 使用多少个G查询线路
+FilterGNum=10
+
+# 使用首字母查询出发和到达的站点 ,分隔
+UseFirstLetterSites=27
+
+# 定时查询 同时查询的站点数量
+TimingQuerySiteNum=2
+
+# 定时查询反馈地址
+TimingQueryReqURL=""
+
+[MYSQL]
+MasterConStr="tcdeveluser:PaSSTcdEVelU321!# @tcp(121.40.106.209:3306)/busticket?charset=utf8"
+SlaveConStr="tcdeveluser:PaSSTcdEVelU321!# @tcp(121.40.106.209:3306)/busticket?charset=utf8"
+
+# 默认使用 QueryOptions:FilterGNum 如果单独配置使用配置的值
+[SiteOptions]
+
+[SiteOptions.1.web]
+QueryPreDays = "111"
+FilterGNum=10
+
+[SiteOptions.1.app]
+QueryPreDays = "122"
+FilterGNum=20
+
+[SiteOptions.2.web]
+QueryPreDays = "211"
+FilterGNum=100
+
+[SiteOptions.2.app]
+QueryPreDays = "222"
+FilterGNum=200

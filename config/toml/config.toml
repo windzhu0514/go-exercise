@@ -1,0 +1,24 @@
+[Common]
+# 订单中心URL
+# OrderCenterURL="http://10.117.84.216:9110/bus"
+OrderCenterURL="http://10.111.21.25:9110/bus"
+
+# 本程序监听端口
+ListenPort=9113
+
+# 重试次数
+ReTryTimes=3
+
+# redis连接
+RedisIPPort="127.0.0.1:6379"
+
+# 是否禁用无效线路
+DisableInvalidLine=true
+
+# 数据不写入数据库
+IsNoDB=true
+
+# 支持web和app的站点
+[Common.SiteType]
+Web=[1,2,3,4,5,6,7]
+App=[2,3,4,5,6,7]

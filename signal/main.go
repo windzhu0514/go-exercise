@@ -23,7 +23,7 @@ func main() {
 	// kill -10 syscall.SIGUSR1					output:user defined signal 1
 	// kill -12 syscall.SIGUSR2					output:user defined signal 2
 	ch := make(chan os.Signal, 10)
-	signal.Notify(ch, syscall.SIGHUP, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGUSR2, syscall.SIGUSR1)
+	signal.Notify(ch, syscall.SIGHUP, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM, syscall.SIGQUIT)
 	for {
 		sig := <-ch
 		log.Println(sig)
