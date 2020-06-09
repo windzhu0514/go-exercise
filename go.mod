@@ -23,4 +23,5 @@ require (
 	github.com/tealeg/xlsx v1.0.5
 	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
+	gopkg.in/yaml.v2 v2.3.0
 )
