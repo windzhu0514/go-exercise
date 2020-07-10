@@ -1,31 +1,21 @@
 package main
 
 import (
-	"log"
-	"os"
-	"os/signal"
-	"syscall"
+	"fmt"
+	"net/http"
 )
 
 func main() {
-	f, err := os.OpenFile("./log.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	if err != nil {
-		panic(err)
-	}
+	mux := http.NewServeMux()
+	pprofHandler()
+	mux.HandleFunc("/debug/pprof/", index())
+	mux.HandleFunc("/debug/pprof/cmdline", cmdline())
+	mux.HandleFunc("/debug/pprof/profile", profile())
+	mux.HandleFunc("/debug/pprof/symbol", symbol())
+	mux.HandleFunc("/debug/pprof/trace", trace())
+	mux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+		writer.Write([]byte("一边去"))
+	})
 
-	log.SetOutput(f)
-
-	// kill -1 syscall.SIGHUP					output:hangup
-	// ctrl+c syscall.SIGINT					output:interrupt
-	// syscall.SIGKILL 该信号不能被捕获处理
-	// kill syscall.SIGTERM  kill 默认发送TERM	 output:terminated
-	// ctrl+\ syscall.SIGQUIT					output:quit
-	// kill -10 syscall.SIGUSR1					output:user defined signal 1
-	// kill -12 syscall.SIGUSR2					output:user defined signal 2
-	ch := make(chan os.Signal, 10)
-	signal.Notify(ch, syscall.SIGHUP, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM, syscall.SIGQUIT)
-	for {
-		sig := <-ch
-		log.Println(sig)
-	}
+	fmt.Println(http.ListenAndServe(":9001", mux))
 }

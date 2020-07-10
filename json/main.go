@@ -22,27 +22,27 @@ type QueryCoaches_BusInfo struct {
 type omit *struct{}
 
 func main() {
-	var busInfo = QueryCoaches_BusInfo{}
-
-	busInfo.Departure = "苏州"
-	busInfo.Destination = "河南"
-	//busInfo.DepartureCode = "1231231"
-	// busInfo.Destination = "三岔"
-	// busInfo.ScheduleId = 2999494
-	// busInfo.DepartureCode = 1129944
-	// busInfo.TicketPrice = 12.5
-	// busInfo.TicketPrice2 = 15.6
+	//var busInfo = QueryCoaches_BusInfo{}
 	//
-
-	jsonData, err := json.Marshal(struct {
-		Info        QueryCoaches_BusInfo
-		Destination string `json:"destination,omitempty"`
-	}{Info: busInfo})
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println(string(jsonData))
+	// busInfo.Departure = "苏州"
+	// busInfo.Destination = "河南"
+	// //busInfo.DepartureCode = "1231231"
+	// // busInfo.Destination = "三岔"
+	// // busInfo.ScheduleId = 2999494
+	// // busInfo.DepartureCode = 1129944
+	// // busInfo.TicketPrice = 12.5
+	// // busInfo.TicketPrice2 = 15.6
+	// //
+	//
+	// jsonData, err := json.Marshal(struct {
+	// 	Info        QueryCoaches_BusInfo
+	// 	Destination string `json:"destination,omitempty"`
+	// }{Info: busInfo})
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
+	// fmt.Println(string(jsonData))
 
 	// var buff bytes.Buffer
 	// enc := json.NewEncoder(&buff)
@@ -54,7 +54,10 @@ func main() {
 	// }
 	//
 	// fmt.Println(buff.String())
-	// jsonstr := `{"departure":"三门","scheduleId":2999494,"departureCode":1129944,"ticketPrice":"12.5"}`
-	// fmt.Println(json.Unmarshal([]byte(jsonstr), &busInfo))
-	// fmt.Println(busInfo)
+	jsonstr := `{"departure":"\u4e09\u95e8","scheduleId":"2999494","ticketPrice":"12.5"}`
+	busInfo := map[string]string{}
+	fmt.Println(json.Unmarshal([]byte(jsonstr), &busInfo))
+	for k, v := range busInfo {
+		fmt.Printf("%s %p\n", k, &v)
+	}
 }

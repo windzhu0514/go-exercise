@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/BurntSushi/toml"
 )
@@ -21,8 +22,12 @@ type config struct {
 
 func main() {
 	var c config
-	meta, err := toml.DecodeFile("config.toml", &c)
+	meta, err := toml.DecodeFile("111config.toml", &c)
 	if err != nil {
+		if os.IsNotExist(err) {
+			fmt.Println("xxxxxxxxxx")
+			return
+		}
 		fmt.Println(err)
 		return
 	}

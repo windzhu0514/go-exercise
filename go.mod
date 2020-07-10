@@ -3,7 +3,9 @@ module go-exercise
 go 1.13
 
 require (
+	fyne.io/fyne v1.2.4
 	github.com/BurntSushi/toml v0.3.1
+	github.com/ChimeraCoder/gojson v1.1.0
 	github.com/PuerkitoBio/goquery v1.5.1
 	github.com/chromedp/cdproto v0.0.0-20200209033844-7e00b02ea7d2
 	github.com/chromedp/chromedp v0.5.3
@@ -19,8 +21,11 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/robertkrimen/otto v0.0.0-20191219234010-c382bd3c16ff
 	github.com/robfig/cron/v3 v3.0.1
+	github.com/spf13/cobra v1.0.0
 	github.com/spf13/viper v1.6.2
 	github.com/tealeg/xlsx v1.0.5
+	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
+	gopkg.in/yaml.v2 v2.2.4
 )

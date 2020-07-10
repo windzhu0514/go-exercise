@@ -1,0 +1,42 @@
+common:
+  listenPort: 9117,
+  orderCenterURL: http://47.98.40.238:9120/jdapi
+  localURL: http://47.110.127.250
+
+modules:
+  redis:
+    address: 192.168.220.134:6379
+
+  mysql:
+    masterDSN: jdaccountuser:JpdAccUpPwDIr3!#1389@tcp(10.111.21.28:3306)/jdaccountdb?charset=utf8
+    slaveDSN: jdaccountuser:JpdAccUpPwDIr3!#1389@tcp(10.111.21.28:3306)/jdaccountdb?charset=utf8
+
+  report:
+    JobNums: 43026
+
+  suppliers:
+    mobileNo:
+      dbsupplier:
+        database:
+          masterDSN: jdaccountuser:JpdAccUpPwDIr3!#1389@tcp(10.111.21.28:3306)/jdaccountdb?charset=utf8
+          slaveDSN: jdaccountuser:JpdAccUpPwDIr3!#1389@tcp(10.111.21.28:3306)/jdaccountdb?charset=utf8
+    sms:
+      defaut:
+      queryURL: http://train.17usoft.com/catmessage/reqMsgEx
+
+services:
+  register:
+    hotel:
+      default:
+        siteType: hotel
+        engineType: app
+        mobileNoSupplierID: database
+        smsSupplierID: defaut
+      options:
+    airline:
+      default:
+        siteType: hotel
+        engineType: app
+        mobileNoSupplierID: database
+        smsSupplierID: defaut
+      options:

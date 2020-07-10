@@ -2,20 +2,14 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"net/http"
 )
 
-func main() {
-	t := time.NewTimer(5 * time.Second)
-over:
-	for {
-		fmt.Println("for")
-		select {
-		case <-t.C:
-			fmt.Println("over1")
-			break over
-		}
-	}
+const defaultAddr = "127.0.0.1:0"
 
-	fmt.Println("over")
+func main() {
+	http.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println(r.RemoteAddr)
+	}))
+	http.ListenAndServe(defaultAddr, nil)
 }

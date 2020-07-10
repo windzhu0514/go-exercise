@@ -48,6 +48,5 @@ void sign(const char* in, size_t in_size, char* out, size_t* out_size) {
 	//char key[] = "83c96b209eb9731bab61dd03dc34e1afY4yBJhR5whBO3j8lGOkXJQ==";
 	int key_size = 0x38;
 	sign_internal(key, key_size, in, in_size, sha1);
-	printf("sign:%s",sha1);
 	base64_encode((unsigned char*)out, out_size, (unsigned char*)sha1, 0x14);
 }

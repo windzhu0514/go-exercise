@@ -1,0 +1,8 @@
+{
+  // ffsd
+  "common": {
+    "listenPort": "9117",
+    "orderCenterURL": "http://47.98.40.238:9120/jdapi",
+    "localURL": "http://47.110.127.250"
+  }
+}

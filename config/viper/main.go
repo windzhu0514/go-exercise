@@ -40,8 +40,8 @@ type SystemConfig struct {
 
 func main() {
 	//viper.SetConfigName("conf")
-	viper.SetConfigFile("./conf/conf2.toml")
-	viper.SetConfigFile("./conf/conf.toml")
+	//viper.SetConfigFile("./conf/conf2.toml")
+	viper.SetConfigFile("./config/viper/conf/conf.json")
 
 	//viper.AddConfigPath("./conf/")
 	if err := viper.ReadInConfig(); err != nil {

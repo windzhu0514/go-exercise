@@ -4,259 +4,190 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
-	"strconv"
 	"strings"
-	"time"
-	"unicode"
-	"unicode/utf8"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/robertkrimen/otto"
 )
 
 func main() {
-	data, err := ioutil.ReadFile("./test.html")
+	data, err := ioutil.ReadFile("./parse/html/test.html")
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(parseBookInfo(string(data)))
+	//fmt.Println(parseHTML(string(data)))
 	//parseScript(string(data))
+	fmt.Println(parseorderdetails(string(data)))
 }
 
-type CheckTicketRes_Data struct {
-	TicketNo         string              `json:"ticketNo"`         // 电子客票号
-	BookingReference string              `json:"bookingReference"` // PNR
-	FullName         string              `json:"fullName"`         // 乘客全名(英文含/,中文无/)
-	FirstName        string              `json:"firstName"`        // 乘客名
-	LastName         string              `json:"lastName"`         // 乘客姓
-	Gender           string              `json:"gender"`           // 乘客姓别 M：男；F：女
-	AdultTicketPrice Monetary            `json:"adultTicketPrice"` // 成人票价
-	AdultTotalTax    Monetary            `json:"adultTotalTax"`    // 成人税额
-	TaxDetail        map[string]Monetary `json:"taxDetail"`        // 税详细，不同航司key不同
-	Segments         []FlightSegment     `json:"segments"`         // 航段集合
-}
-
-type CheckTicketPassengerInfo struct {
-	FirstName string `json:"firstName"` // 乘客名
-	LastName  string `json:"lastName"`  // 乘客姓
-	CardType  string `json:"cardType"`  // 证件号码
-	CardNo    string `json:"cardNo"`    // 证件号码
-}
-
-type Monetary struct {
-	Currency    string `json:"currency"`    // 币种
-	TotalAmount string `json:"totalAmount"` // 总金额
-}
-
-type FlightSegment struct {
-	Index       string `json:"index"`       // 从1开始
-	FlightNo    string `json:"flightNo"`    // 航班号
-	CabinCode   string `json:"cabinCode"`   // 舱位
-	DepAirport  string `json:"depAirport"`  // 出发机场三字码
-	ArrAirport  string `json:"arrAirport"`  // 到达机场三字码
-	DepDateTime string `json:"depDateTime"` // 起飞时间	yyyy-MM-dd HH:mm:ss
-	ArrDateTime string `json:"arrDateTime"` // 到达时间 yyyy-MM-dd HH:mm:ss
-	// 航段状态 UNKNOWN:未知 CANCELED:已取消 SOLD:已售票 REFUND:申请退票 USED:已乘机
-	Status string `json:"status"`
-}
-
-func HasHan(s string) bool {
-	for _, r := range s {
-		if unicode.Is(unicode.Han, r) {
-			return true
-		}
-	}
-	return false
-}
-
-func IsAllASCII(s string) bool {
-	for i := 0; i < len(s); i++ {
-		if s[i] >= utf8.RuneSelf {
-			return false
-		}
-	}
-	return true
-}
-
-func parseBookInfo(html string) (data CheckTicketRes_Data, err error) {
+func parseHTML(html string) error {
 	doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
 	if err != nil {
-		return data, err
+		return nil
 	}
 
-	bFind := false
-	bIsChild := false
-	coutAdult := 0
-	sections := doc.Find("form#ManageBookingForm table.print-guest-details tbody tr.guest-padding")
-	for i := 0; i < sections.Length(); i += 2 {
-		guestName := sections.Eq(i).Find("td").Text()
-		fields := strings.Fields(guestName)
-		if len(fields) < 5 {
-			return data, errors.New("姓名格式无法解析")
+	params := make(map[string]string)
+	doc.Find("body form input").Each(func(i int, s *goquery.Selection) {
+		name, _ := s.Attr("name")
+		value, _ := s.Attr("value")
+		if name != "" && value != "" {
+			params[name] = value
 		}
-
-		adultorchild := fields[4]
-		if strings.Contains(strings.ToLower(adultorchild), "adult") {
-			coutAdult++
-		}
-
-		gender := fields[1]
-		if strings.Contains(strings.ToLower(gender), "ms") {
-			data.Gender = "F"
-		} else {
-			data.Gender = "M"
-		}
-
-		firstName := fields[2]
-		lastName := fields[3]
-		if firstName != "YAN" &&
-			lastName != "LI" {
-			continue
-		}
-
-		bFind = true
-
-		data.FirstName = firstName
-		data.LastName = lastName
-		if IsAllASCII(firstName) && IsAllASCII(lastName) {
-			data.FullName = lastName + "/" + firstName
-		} else {
-			data.FullName = lastName + firstName
-		}
-
-		if strings.Contains(strings.ToLower(adultorchild), "child") {
-			bIsChild = true
-		}
-	}
-
-	if !bFind {
-		return data, errors.New("未找到指定的姓名")
-	}
-
-	var segment FlightSegment
-	segment.Index = "1"
-
-	fightInfo := doc.Find("form#ManageBookingForm table.print-flight-details tbody tr td")
-	segment.FlightNo = fightInfo.Eq(0).Find("p").Eq(1).Text()
-	segment.FlightNo = strings.TrimSpace(segment.FlightNo)
-	segment.FlightNo = strings.ReplaceAll(segment.FlightNo, " ", "")
-
-	depFightText := fightInfo.Eq(1).Text()
-	fields := strings.FieldsFunc(depFightText, func(r rune) bool {
-		if r == rune('\r') || r == rune('\n') {
-			return true
-		}
-		return false
 	})
-	if len(fields) >= 3 {
-		cityAndCode := strings.Split(fields[0], "|")
-		if len(cityAndCode) >= 2 {
-			segment.DepAirport = strings.TrimSpace(cityAndCode[1])
-		}
 
-		//  Tue. 14 Jan. 2020, 0320H (03:20AM)
-		depDateTime := strings.TrimSpace(fields[2])
-		indexComma := strings.Index(depDateTime, ", ")
-		if indexComma < 0 {
-			return data, errors.New("无法解析出发时间：" + depDateTime)
-		}
+	fmt.Println(params)
 
-		indexSpace := strings.LastIndex(depDateTime, " ")
-		if indexSpace < 0 || indexSpace < indexComma {
-			return data, errors.New("无法解析出发时间：" + depDateTime)
-		}
-
-		depDateTime = depDateTime[:indexComma] + depDateTime[indexSpace:]
-		dateTime, err := time.Parse("Mon. 02 Jan. 2006 (15:04AM)", depDateTime)
-		if err != nil {
-			return data, errors.New("无法解析出发时间：" + depDateTime)
-		}
-
-		segment.DepDateTime = dateTime.Format("2006-01-02 15:04:00")
-	}
-
-	arrFightText := fightInfo.Eq(3).Text()
-	fields = strings.FieldsFunc(arrFightText, func(r rune) bool {
-		if r == rune('\r') || r == rune('\n') {
-			return true
-		}
-		return false
-	})
-	if len(fields) >= 3 {
-		cityAndCode := strings.Split(fields[0], "|")
-		if len(cityAndCode) >= 2 {
-			segment.ArrAirport = strings.TrimSpace(cityAndCode[1])
-		}
-
-		// Tue. 14 Jan. 2020, 0545H (05:45AM)
-		arrDateTime := strings.TrimSpace(fields[2])
-
-		indexComma := strings.Index(arrDateTime, ", ")
-		if indexComma < 0 {
-			return data, errors.New("无法解析到达时间：" + arrDateTime)
-		}
-
-		indexSpace := strings.LastIndex(arrDateTime, " ")
-		if indexSpace < 0 || indexSpace < indexComma {
-			return data, errors.New("无法解析到达时间：" + arrDateTime)
-		}
-
-		arrDateTime = arrDateTime[:indexComma] + arrDateTime[indexSpace:]
-		dateTime, err := time.Parse("Mon. 02 Jan. 2006 (15:04AM)", arrDateTime)
-		if err != nil {
-			return data, errors.New("无法解析到达时间：" + arrDateTime)
-		}
-
-		segment.ArrDateTime = dateTime.Format("2006-01-02 15:04:00")
-	}
-
-	status := doc.Find("form#ManageBookingForm div.print-booking-details div").Eq(0).Find("strong").Text()
-	segment.Status = MapFlightStatus(strings.TrimSpace(status))
-
-	data.Segments = append(data.Segments, segment)
-
-	pnr := doc.Find("form#ManageBookingForm div.print-booking-details div").Eq(2).Find("strong").Text()
-	data.BookingReference = strings.TrimSpace(pnr)
-
-	if bIsChild {
-		return data, nil
-	}
-
-	// 费用
-	paymentInfo := doc.Find("form#ManageBookingForm table.print-payment-details tbody tr").
-		Eq(0).Find("td").Eq(3).Text()
-	paymentInfo = strings.TrimSpace(paymentInfo)
-	fields = strings.Fields(paymentInfo)
-	if len(fields) >= 2 {
-		currency := fields[0]
-		totalAmountStr := strings.Replace(fields[1], ",", "", -1)
-		data.AdultTicketPrice.Currency = currency
-		totalAmount, err := strconv.ParseFloat(totalAmountStr, 64)
-		if err != nil {
-			return data, errors.New("")
-		}
-		data.AdultTicketPrice.TotalAmount = strconv.FormatFloat(totalAmount/float64(coutAdult), 'f', 2, 64)
-	}
-
-	return data, nil
+	return nil
 }
 
-func MapFlightStatus(s string) string {
-	switch s {
-	case "CONFIRMED":
-		return "SOLD" // 已售票
-	case "":
-		return "USED" // 已乘机
-	case " ":
-		return "CANCELED" // 已取消
-	case "  ":
-		return "REFUND" // 申请退票
-	case "   ":
-		return "UNKNOWN" // 未知
+type COPassengerInfo struct {
+	Name     string `json:"name"`               // 乘客姓名
+	Type     int    `json:"type"`               // 乘客类型 成人：ADULT 儿童：CHILD 婴儿：INFANT
+	Birthday string `json:"birthday"`           // 出生日期 "yyyy-MM-dd"
+	CertNo   string `json:"certNo"`             // 证件号码
+	CertType int    `json:"certType,omitempty"` // 证件类型  NI:身份证 JG:军官证 ID:其它 PP:护照
+	Mobile   string `json:"mobile,omitempty"`   // 号码
+	FareInfo
+}
+
+type FareInfo struct {
+	Price      string `json:"price"`      // 价格
+	AirportTax string `json:"airportTax"` // 机场建设费
+	FuelTax    string `json:"fuelTax"`    // 燃油税
+	OtherTax   string `json:"otherTax"`   // 其他费用
+}
+
+type Ticket struct {
+	COPassengerInfo
+	SegmentList []Ticket_Segment `json:"segmentList"`
+}
+
+type Ticket_Segment struct {
+	RouteNo         int    `json:"routeNo"`                 // 航段编号 1代表第一段2代表第二段 依次类推
+	Departure       string `json:"departure"`               // 出发城市 "上海"
+	DepartureCode   string `json:"departureCode,omitempty"` // 出发城市三字码 "SHA"
+	DepAirportName  string `json:"depAirportName"`          // 出发机场 "虹桥国际机场T1"
+	DepAirport      string `json:"depAirport"`              // 出发机场三字码 "SHA"
+	Destination     string `json:"destination"`             // 到达城市 "深圳"
+	DestinationCode string `json:"destinationCode"`         // 到达城市三字码 "SZX"
+	DestAirportName string `json:"destAirportName"`         // 到达机场 "宝安国际机场T3"
+	DestAirport     string `json:"destAirport"`             // 到达机场三字码 "SZX"
+	FlightNo        string `json:"flightNo"`                // 航班号 "9C8917"
+	FlightType      string `json:"flightType"`              // 航班机型 "空客320_186"
+	CabinName       string `json:"cabinName"`               // 舱位名 "R3E" 会有重复
+	CabinCode       string `json:"cabinCode"`               // 舱位代码 "5"
+	DepartureTime   string `json:"departureTime"`           // 起飞时间 "2020-06-29 06:30:00"
+	ArrivalTime     string `json:"arrivalTime"`             // 到达时间 "2020-06-29 08:55:00"
+	MainFlightNo    string `json:"MainFlightNo"`            // 承载航班号
+}
+
+type orderDetail struct {
+	OrderCreateTime string
+	ContactName     string
+	ContactMobile   string
+	ContactEmail    string
+	TicketList      []Ticket
+}
+
+func parseorderdetails(html string) (od orderDetail, err error) {
+	doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+	if err != nil {
+		return od, err
 	}
 
-	return ""
+	od.OrderCreateTime = doc.Find("body div.p-wrap.f-cb div div.p-holder div.p-content div.p-order" +
+		"div.add-erweima.clearfix table.m-order tr:nth-child(4) td:nth-child(2)").Text()
+	od.OrderCreateTime = strings.TrimSpace(od.OrderCreateTime)
+
+	sectionOrder := doc.Find("body div.p-wrap.f-cb div div.p-holder div.p-content div.p-order")
+
+	var departure, departureTime, depAirportName, destination, arrivalTime, destAirportName string
+	departureInfo := sectionOrder.Find("table.m-route.c-table tbody tr.last td:nth-child(2) ul li:nth-child(1) p").Text()
+	fields := strings.Fields(departureInfo)
+	if len(fields) > 3 {
+		departureTime = fields[1] + ":00"
+		departure = fields[2]
+		depAirportName = fields[3]
+	}
+	destinationInfo := sectionOrder.Find("table.m-route.c-table tbody tr.last td:nth-child(2) ul li:nth-child(2) p").Text()
+	fields = strings.Fields(destinationInfo)
+	if len(fields) > 3 {
+		arrivalTime = fields[1] + ":00"
+		destination = fields[2]
+		destAirportName = fields[3]
+	}
+
+	sectionService := doc.Find("body div.p-wrap.f-cb div.p-holder div.p-content div.p-order table.m-service.c-table " +
+		"tbody tr:nth-child(2)")
+	flightNo := strings.TrimSpace(sectionService.Find("td:nth-child(1)").Text())
+	sectionService.Find("td:nth-child(2) h6").Each(func(i int, s *goquery.Selection) {
+		var ticket common.Ticket
+		var passager common.COPassengerInfo
+		var segment common.Ticket_Segment
+		sectonCService := sectionService.Find("div.c-service").Eq(i)
+		segment.FlightNo = flightNo
+		segment.CabinName = sectonCService.Find("ul > li:nth-child(1) > div > span.c-name > span").Text()
+		segment.CabinName = strings.TrimSpace(segment.CabinName)
+		segment.CabinName = strings.Trim(segment.CabinName, "()")
+		segment.Departure = departure
+		segment.DepartureTime = departureTime
+		segment.DepAirportName = depAirportName
+		segment.Destination = destination
+		segment.ArrivalTime = arrivalTime
+		segment.DestAirportName = destAirportName
+
+		passager.Name = strings.TrimPrefix(strings.TrimSpace(s.Text()), "乘机人：")
+		passager.Price = strings.TrimSpace(sectonCService.Find("ul > li:nth-child(1) > div > span.c-price").Text())
+		passager.Price = strings.TrimPrefix(passager.Price, "/¥")
+		passager.AirportTax = strings.TrimSpace(sectonCService.Find("ul > li:nth-child(4) > div > span.c-price").Text())
+		passager.AirportTax = strings.TrimPrefix(passager.AirportTax, "/¥")
+		passager.FuelTax = strings.TrimSpace(sectonCService.Find("ul > li:nth-child(6) > div > span.c-price").Text())
+		passager.FuelTax = strings.TrimPrefix(passager.FuelTax, "/¥")
+		passager.OtherTax = strings.TrimSpace(sectonCService.Find("ul > li:nth-child(8) > div > span.c-price").Text())
+		passager.OtherTax = strings.TrimPrefix(passager.OtherTax, "/¥")
+
+		sectionPassengers := doc.Find("body div.p-wrap.f-cb div.p-content div.p-passenger").Eq(0)
+		sectionPassengers.Find("ul li").EachWithBreak(func(i int, ss *goquery.Selection) bool {
+			name := ss.Find("table tr td.name.f-cb p:nth-child(2)").Text()
+			name = strings.TrimSpace(name)
+			if name == passager.Name {
+				pType := ss.Find("table tr td.name.f-cb p.c-ps").Text()
+				pType = strings.TrimSpace(pType)
+				switch pType {
+				case "(成人)":
+					passager.Type = common.PassengerTypeAdult
+				case "(儿童)":
+					passager.Type = common.PassengerTypeChild
+				case "(婴儿)":
+					passager.Type = common.PassengerTypeInfant
+				}
+
+				passager.Birthday = ss.Find("table tr td.info p").Eq(0).Text()
+				passager.Birthday = strings.TrimPrefix(strings.TrimSpace(passager.Birthday), "出生年月：")
+				passager.Mobile = ss.Find("table tr td.info div.show_Tips.pMobile p span").Text()
+				passager.Mobile = strings.TrimSpace(passager.Mobile)
+				passager.CertNo = ss.Find("table tr td.info div.show_Tips.certificateTypeV p span.certificate.hide-certificate").Text()
+				passager.CertNo = strings.TrimSpace(passager.CertNo)
+				certType := ss.Find("table tr td.info div.show_Tips.certificateTypeV p span.hide-certificate-type").Text()
+				certType = strings.TrimSpace(certType)
+				passager.CertType = formatCertType(certType)
+				return false
+			}
+
+			return true
+		})
+
+		ticket.COPassengerInfo = passager
+		ticket.SegmentList = append(ticket.SegmentList, segment)
+		od.TicketList = append(od.TicketList, ticket)
+	})
+
+	od.ContactName = doc.Find("body div.p-wrap.f-cb div div.p-holder div.p-content div:nth-child(3) ul li table tbody tr td.name.f-cb p").Text()
+	od.ContactName = strings.TrimSpace(od.ContactName)
+	od.ContactMobile = strings.TrimSpace(doc.Find("#concactPerson").Text())
+
+	return od, nil
 }
 
 func parseScript(html string) error {

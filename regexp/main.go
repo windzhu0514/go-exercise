@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	str := "ewp_proxy_err_msg=提取记录失败，请至机场办理乘机手续。"
-	reg := regexp.MustCompile("ewp_proxy_err_msg=(.*)。")
+	str := "5月29日01:00之前（不影响酒店留房）"
+	reg := regexp.MustCompile("(\\d{1,2}月\\d{1,2}日\\d{1,2}:\\d{1,2})之前")
 	fmt.Println(reg.FindStringSubmatch(str))
-
 }
