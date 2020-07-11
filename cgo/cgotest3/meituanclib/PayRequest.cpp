@@ -1,11 +1,11 @@
 //
 
 #include<string>
-#include<polarssl/aes.h>
-#include<polarssl/sha2.h>
-#include<polarssl/base64.h>
-#include<polarssl/rsa.h>
-#include<polarssl/bignum.h>
+#include"polarssl/aes.h"
+#include"polarssl/sha2.h"
+#include"polarssl/base64.h"
+#include"polarssl/rsa.h"
+#include"polarssl/bignum.h"
 #include<stdlib.h>
 #include"sign.h"
 #include"PayRequest.h"
@@ -121,7 +121,6 @@ int encrypt_request(char** out_enc, const char* uuid, const char* time_stamp, co
 	int  rsa_out_len=0x200;
 	rsa_encrpyted_content(hmac, out_enc[in_count + 0],&rsa_out_len);
 
-	printf("result:%s\n len=%d\n",out_enc[0],rsa_out_len);
 	int i;
 	for (i = 0; i < in_count; i++)
 	{
@@ -166,7 +165,6 @@ int encrypt_request_with_random(char** out_enc, const char* uuid, const char* ti
 	int  rsa_out_len = 0x200;
 	rsa_encrpyted_content(hmac, out_enc[in_count + 0], &rsa_out_len);
 
-	printf("result:%s\n len=%d\n", out_enc[0], rsa_out_len);
 	int i;
 	for (i = 0; i < in_count; i++)
 	{

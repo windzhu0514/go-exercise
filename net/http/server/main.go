@@ -49,5 +49,6 @@ func main() {
 		w.Write([]byte("哈哈哈"))
 	})
 
+	http.HandleFunc()
 	fmt.Println(server.ListenAndServe())
 }

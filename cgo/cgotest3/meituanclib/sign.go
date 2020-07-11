@@ -21,11 +21,11 @@ func Sign(input string) (string, error) {
 	defer C.free(unsafe.Pointer(cstrData))
 
 	var encoded [30]C.char
-	var outlen C.size_t
+	var outlen = C.size_t(30)
 	C.sign(cstrData, C.size_t(len(input)), &encoded[0], &outlen)
 
 	if outlen > 0 && outlen < 30 {
-		return C.GoStringN(&encoded[0], C.int(outlen)-1), nil
+		return C.GoStringN(&encoded[0], C.int(outlen)), nil
 	} else {
 		return "", fmt.Errorf("outlen:%d is not valid", outlen)
 	}

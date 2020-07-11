@@ -1,18 +1,18 @@
-#include <string.h>
-#include<stdlib.h>
-#include <stdio.h>
-#include "sign.h"
-
-int main() {
+//#include <string.h>
+//#include <stdlib.h>
+//#include <stdio.h>
+//#include "sign.h"
+//
+//int main() {
 //	while (true)
 //	{
-		const char* raw = "GET http://apihotel.meituan.com/hbsearch/HotelSearch __reqTraceID=6346b894-ff05-4bcd-94d3-742bb211ec76&__skck=6a375bce8c66a0dc293860dfa83833ef&__skno=3a07918e-d14e-4a4f-b617-becd81c5a187&__sksc=http&__skts=1526031102223&__skua=b97cb1afbb62c069f4817f6ae443271e&app_name=tower&app_version=1.6.1&attr_28=129&cate=20&cateId=20&category=5&ci=70&cityId=70&client=android&endDay=20180512&gps_cityid=70&hotel_queryid=4A7113516F2B721BE3DB3E52693A0E6A1BDF1044138B64EB4FBC58C3E13A71D61526031107785&hoteltrack_queryid=2cbabb4f-ab52-407a-8b96-ed491a1eced7_0&lat=28.174552&limit=30&lng=112.993039&msid=3522840457600421525921232213&mypos=28.174552%2C112.993039&newcate=1&offset=0&q=&queryRewrite=rewrite&sort=smart&sourceType=hotel&startDay=20180512&ste=_b400200&userid=-1&utm_campaign=AtowerBgroupC831405058997485568_g1_f85581E196080416420603783086960567931616550238_c3_e8388312714591508996_v994852126390249171__174_a_b400200_o1_dhotelpoitagb_k1002G__uchuxingcategory-v0-w20__xhotelhomepage__ysearch&utm_content=352284045760042&utm_medium=android&utm_source=yyb-lx&utm_term=570&uuid=4A7113516F2B721BE3DB3E52693A0E6A1BDF1044138B64EB4FBC58C3E13A71D6&version_name=8.7";
-		char out[30] = { 0 };
-		size_t out_size = 30;
-		sign(raw, strlen(raw), out, &out_size);
-		printf("%s %d\n", out, out_size);
-
-
+//		const char* raw = "GET http://apihotel.meituan.com/hbsearch/HotelSearch __reqTraceID=6346b894-ff05-4bcd-94d3-742bb211ec76&__skck=6a375bce8c66a0dc293860dfa83833ef&__skno=3a07918e-d14e-4a4f-b617-becd81c5a187&__sksc=http&__skts=1526031102223&__skua=b97cb1afbb62c069f4817f6ae443271e&app_name=tower&app_version=1.6.1&attr_28=129&cate=20&cateId=20&category=5&ci=70&cityId=70&client=android&endDay=20180512&gps_cityid=70&hotel_queryid=4A7113516F2B721BE3DB3E52693A0E6A1BDF1044138B64EB4FBC58C3E13A71D61526031107785&hoteltrack_queryid=2cbabb4f-ab52-407a-8b96-ed491a1eced7_0&lat=28.174552&limit=30&lng=112.993039&msid=3522840457600421525921232213&mypos=28.174552%2C112.993039&newcate=1&offset=0&q=&queryRewrite=rewrite&sort=smart&sourceType=hotel&startDay=20180512&ste=_b400200&userid=-1&utm_campaign=AtowerBgroupC831405058997485568_g1_f85581E196080416420603783086960567931616550238_c3_e8388312714591508996_v994852126390249171__174_a_b400200_o1_dhotelpoitagb_k1002G__uchuxingcategory-v0-w20__xhotelhomepage__ysearch&utm_content=352284045760042&utm_medium=android&utm_source=yyb-lx&utm_term=570&uuid=4A7113516F2B721BE3DB3E52693A0E6A1BDF1044138B64EB4FBC58C3E13A71D6&version_name=8.7";
+//		char out[30] = { 0 };
+//		size_t out_size = 30;
+//		sign(raw, strlen(raw), out, &out_size);
+//		printf("%s %d\n", out, out_size);
+//
+//
 //		const char* siua_raw = "1.0}}nanopi3|Android|aosp_nanopi3|nanopi3|LMY48G|en|US|FriendlyARM (www.arm9.net)|AOSP on NanoPi 3|5.1.1|22|dev-keys|Android/aosp_nanopi3/nanopi3:5.1.1/LMY48G/root04051713:userdebug/dev-keys|nanopi3|jensen|userdebug|nanopi3|armeabi-v7a|armeabi|aosp_nanopi3-userdebug 5.1.1 LMY48G eng.root.20170405.171324 dev-keys|0|1|}}mtp,adb|mtp,adb|mtp,adb|||wlan0|NOT_READY||0|0|1|1|1|0|1|1|0|1|1|1}}8|-|-|-|-|}}-|-|-|672*1280|5GB|5GB|94:a1:a2:bc:fe:f6||wifi}}-|0|1.0|0|0||46e1dd97-678c-4b45-82b1-502b044a0d54}}0|0|0|}}Android|com.ly.meituan|1.0|22|-|2018-05-15 06:33:18:018}}0.0|0.0|wu|50:64:2b:94:1f:3b|1|-67|-|-|-|}}";
 //		char *      siua_out = (char*)malloc(strlen(siua_raw) * 2);
 //		size_t         siua_out_len = 0;
@@ -55,7 +55,7 @@ int main() {
 //		decyptDataAES2(basedata, baselen, decout, &declen);
 //		free(decout);
 //	}
-
-
-	return 0;
-}
+//
+//
+//	return 0;
+//}

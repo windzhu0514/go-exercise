@@ -2,23 +2,11 @@ package main
 
 import (
 	"fmt"
-	"go-exercise/test/modules"
-	_ "go-exercise/test/modules/stringbank"
+	"strconv"
 )
 
 func main() {
-	modInfo, err := modules.GetModule("string.bank")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	sb, err := modInfo.New()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println(sb.Size())
-	fmt.Println(sb.Get(1))
+	str := `"{\"success\":1,\"gt\":\"25ba81caec944f8d74c98befd841a667\",\"challenge\":\"2234ca37dcaef92166a615e42c032ed6\",\"new_captcha\":true}"`
+	fmt.Println(str)
+	fmt.Println(strconv.Unquote(str))
 }

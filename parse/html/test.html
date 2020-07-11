@@ -1,1031 +1,1265 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--[if IE]><html class="ie no-js" lang="en"><![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="zh-CN"><head>
+    <title>会员中心-机票订单详情-春秋</title>
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords">
+    <meta name="description">
 
 
-	<title>Cebu Pacific - Manage Booking</title>
+    <meta name="SF.UD" content="dml6TExUNVRPdmRtbWRCek90M2I3QT09">
+    <meta name="WT.dcsvid" content="anYydlBqei9ydllJa3VIRy9aRm5JUT09">
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="msapplication-starturl" content="/Flight/Search" />
-	<meta property="og:image" content="http://book.cebupacificair.com/Images/CebuPacific/cebfb_logo.jpg" />
-	<meta property="og:image:secure_url" content="http://book.cebupacificair.com/Images/CebuPacific/cebfb_logo.jpg" />
+    <link rel="icon" href="//media.springairlines.com/cache/style/site5/img/favicon.ico">
 
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="image_src" href="http://book.cebupacificair.com/Images/CebuPacific/cebfb_logo.jpg" />
+    <link href="//media.springairlines.com/cache/style/site5/g-base.css?vs=2020070101" rel="stylesheet">
 
-	<link href="/css/plugins?v=QkN3r-BPtAqs-cKNf9c0CV8M4_-6BOfkA7Ua_SbKo9I1" rel="stylesheet"/>
-
-	<link href="/css/main?v=odDVIWR_s82cONZcKSVZ0y_uHy9XZ4wKjixjm4xVhB41" rel="stylesheet"/>
-
-	<link href="/css/jquery-ui?v=hcG1nQ-UfsJqX9jZO3vp49XcrkVA3YklDaBzJdYawb81" rel="stylesheet"/>
+    <link href="//media.springairlines.com/cache/style/site5/c-i.css?vs=2020032001" rel="stylesheet">
 
 
-	<link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href="//media.springairlines.com/cache/style/site5/order.css?vs=2020051201" rel="stylesheet">
+    <link href="//media.springairlines.com/cache/style/site5/c-trip.css?vs=2019122401" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/Css/order.css?vs=190403">
+    <style>
+        .p-order .m-service {
+            color: #333
+        }
+    </style>
 
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="/js/iecompatibility?v=AwHxi_8NFX_q7iFCsiQGXsaZV01hRP3oN4vUoe_8Qm01"></script>
+    <style type="text/css" abt="234"></style><meta name="xhr-info" content="1"><script id="sozz" src="https://s.ssl.qhres.com/ssl/ab77b6ea7f3fbf79.js?8623c2759dc3ec4809fdda8394f2cc48"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script async="" src="https://ajax.springairlines.com/cache/js/3rd/apex.analytic.min.js?vs=2019072402"></script><script async="" src="https://assets.giocdn.com/2.1/gio.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script charset="UTF-8" async="" src="https://api.geetest.com/gettype.php?gt=25ba81caec944f8d74c98befd841a667&amp;callback=geetest_1594199458281"></script><script charset="UTF-8" async="" crossorigin="anonymous" src="https://static.geetest.com/static/js/fullpage.8.9.6.js"></script><script charset="UTF-8" src="https://api.geetest.com/get.php?gt=25ba81caec944f8d74c98befd841a667&amp;challenge=012368e508108ef9b0f04b055509b71a&amp;lang=zh-cn&amp;pt=0&amp;client_type=web&amp;w=dQCc0Dkv6STznBakU0c1KrWoc2JElvKrsIc05QyYcjAKckfHtCmUtLMdg9rmWZq48APzx7nOa1kxAROL7nTNxXztx1m92sF3GLTZSs5jw2acdxY0XvHQW8SWAs4BH1sgug)Gm)OJsQH6hryH00HswWtH65gV1W70sQ2eteOTLQ5KJgs8XjlwLhD0TDGOP)g4gCwmArme2YW0hSIHnvlVLTzjkgPI3ib(h5Tc2JqTdRvnHO73v(rTcQDeVHy6VMbX06mWeLOxPoHhinMfbitm4cny6qShTnk9shp6Urylb4DBEqiuBcc0iDlalPV0SwnuA1AffuyAMyb7wRNe3krQsHt3CafQFSQg8O75U5e8A1t4txw9lLH7QZNO0L0X6ygivCTn(OAMW0UefVSmOdKf5i8QzAhJuVrZ4m)bEWfUlcYgxqMKkHljqViHxf3aETRD2t1EfjqTuWfWisRdE4RKpbryfPiUwF1o7hNg6dwlEHOCOaQc)JW2X0hoiffPsS(IJR50zDnbV0xX2JUVTlzo)Cra3XrngzgxMK7cMywmJF5jO5KOFGvXLad1b5Dokl0)AzhdYydWeeBI)hf2T0pAeBoV9UPwQfZ6RjlO9vU3Wq(ZmyQU)iuCW0EpOr5Eek9YgVU01tg4EV2Oo(XdFWB8rQ0doD2nCawH1N72Hcva9FKhrJUl8PbPdSt2pnyR)PPOcw8scpS8XPzWmUWftY8vL4QAyEjFqN)5Q9YAOQoRn0I4O7BdbFLM05LD2rjln8s7ITxmkpi8VeHu3I5MAfzndKh)dzO7A)ZyVvgYrM5MUftzFBHlPfOHixI)rSwfTaWmJeZElJvwDroPqrXUvxOXT9UMuXQmaxUZuRtVEt9KNAPvk(Ofd6SKquEGEGlVuDjGaaapTo7Z8s6a6OBTdhzcE6i4sZbn5qkn6uQJ6PlkWUwArh)ZkNrrFRK6YJPRfc6skIo8l7bt5QYRTqiMXluRNtt4rjS9N4Km64r12xomdonc2BBUCW4qVqyXd3Y(58VoV8PyoKSQAr69RYCfuTJ(rhw7cp8O)mIdbWq0U1)EjDiVihyFTBRm2MYm76FkY)sNZYouwET8w8LMi(fvpmahspBrfmjsIS4s314b9sGGP0jNQ9sMXaZPk1EUOTTRmLaIKkc2EqxusPpyYTeAUsfEOUXOoStp7t3rTnYyIB)qkAcdW4XBgdJphT)kYcD41Td0dsz9vPWnoOrglj2bS00RV5czR0wgI8bl7TzL5y3lfd8wQS1Z)OTJDl8d6F3ILt8IXN9q(Tz2iU)uHSr2Om15srs4eknFg0vEJeTrpgf0EYOEJpytElokEVBGjsCreJyZSRRC0a5ToOW500x)VvV)kAQW4jPPbkE7fEQOkzMDvdrg4yIQf4xm8lxoIRMn(46cw(NU5XPsire0KeFNjg2c57sGXQjJEf(mUH3Z58R(ihwiWIc0Jyva0P)rDgXBjzLxjosdS8y)IsuMTkHhOxvgT(4tpWoSK8UfQeKY813LArFaZkBw3Ga6eEDQiImTP3vrXEjhHreeMdv5ZV)q26px1nfqLVRd0AXaqJgki2doy(ITnaVkeGk76bhcKjHGDRdXKWyV65cFA0bWe8Zzsc1dwNhzIxscSaMT1AEBSuCkQvbnlbWq0W1AgGqHprYSNFWSxF5mXEKgp3jC5DS5vVh7IZizd9xvUXvxvJzybhe53E3S9bVwZsI3NZ)6T5kr0Tdpeb46UV3EHBV)enjhwTlU93xrmmNQmwluUlsPxDiz4DKR9VKosjnlHvPILH3g9IeRH)LPB)TWPMzPxuAdIU(o4Ov6aB)ctf70s7Bmy0VvtJtJm8NAs5ZsP8xJSneyLeiTncB8Nym3wLT2ZbDJ12QUOMMTcxBJRHcqrkj709RgT0PsFo)wkQMS3w9zIACN0HARE8cbotrwP4xGZ3g9QuLUFxRl1kfsb6uU8gkVnl7PWIhviHVGVnK6bRBm)(O5iYtF5RIrB98h8KYtTWKPlzujhp1CiEVxprJ(em15VrSibrGuadUvNLL5Vz(nB9(3GkIBeq(nL70uvy)ufxn1ELjo1ImYgOPgpHnMbe01xYFbETiyNx0OOUwxO4Qt9QuiI1hF7JhyKQ9tYcJY6e8(OVy5AbvKjbz(VG8vYO5J9KWeTDU0Um9WksnJYuOuiMiNxEYRx(coNQpub59QQb88(PaQn1OjoVFGIdtfyVNh)Ccn46wk(rbrkxDkQS3Sb)qhFxK9usf5obwAwICSd4FsvNExiH9o7bxGyLTK9jVdmwWHyrSL3HwrNtqeS4Ah)7smENrWx(dg4vKR7hi1sQ)9N)7ZehM(Pobwg7QLF7sH43jiL2TU4i2)lS9OtlFs1DCZLyXyMCxVMNndQHpxzQKcQXpZzIx0(tsxRqq(j8mhMuNkXayMzys8y7gIvmXq4dGPwg93P8k9jvk1UCZZ0T9BuQ8IFPKVhFbpQ(py(tsFQ5bKyko.54abce98f1587430bf450dfa0e0f1d106ce905a0323ddd1e7f80ca9d55d87e598de55ffd29cb9bd42b9304c3ed1c55b21f8511d6b9d0feaef5552e096d9c38826ae6b95c0dd7276a491081ec44b5114830401476590d5f1cb3eede0047033ad7503ed3c1ab623032c2886fb00d78cd76126024f7378b3dc810c9d56ae6ca95e4&amp;callback=geetest_1594199452391"></script><link href="https://static.geetest.com/static/wind/style_https.1.5.8.css" rel="stylesheet"><style type="text/css" id="apex_styles_js">
+        .apex-circled{
+        }
+        input.apex-circled{
+            background: rgba(148, 187, 252,.5);
+            border: 4px dashed #458BFA;
+        }
+        .apex-circled::after{
+            content: '';
+            position: absolute;
+            background: rgba(148, 187, 252,.5);
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 4px dashed #458BFA;
+        }
+        .apex-circling{
+        }
+        input.apex-circling{
+            background: rgba(234, 121, 102,.5);
+            border: 4px dashed #D81100;
+        }
+        .apex-circling::after{
+            content: '';
+            position: absolute;
+            background: rgba(234, 121, 102,.5);
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 4px dashed #D81100;
+        }
 
-	<![endif]-->
+        .apex-same-circle{
+        }
+        input.apex-same-circle{
+            background: rgba(179, 157, 219,.5);
+            border: 4px dashed #b39ddb;
+        }
+        .apex-same-circle::after{
+            content: '';
+            position: absolute;
+            background:  rgba(179, 157, 219,.5);
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 4px dashed #b39ddb;
+        }
 
-	<script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/161f5a57e21/ruxitagent_ICA2SVfjqrx_10165190416140756.js" data-dtconfig="app=2887a25ec261c8a6|cors=1|featureHash=ICA2SVfjqrx|srsr=25000|reportUrl=https://bf01739bkp.bf.dynatrace.com/bf|rdnt=1|uxrgce=1|bp=2|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1554256483776|dtVersion=10165190416140756|tp=500,50,0,1" crossorigin="anonymous"></script>
+        .hot-mask-20 {}
+        .hot-mask-19 {}
+        .hot-mask-18 {}
+        .hot-mask-17 {}
+        .hot-mask-16 {}
+        .hot-mask-15 {}
+        .hot-mask-14 {}
+        .hot-mask-13 {}
+        .hot-mask-12 {}
+        .hot-mask-11 {}
+        .hot-mask-10 {}
+        .hot-mask-9 {}
+        .hot-mask-8 {}
+        .hot-mask-7 {}
+        .hot-mask-6 {}
+        .hot-mask-5 {}
+        .hot-mask-4 {}
+        .hot-mask-3 {}
+        .hot-mask-2 {}
+        .hot-mask-1 {}
+        .hot-mask-20:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 56, 57, 0.9), rgba(255, 56, 57, 0.8), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 56, 57, 0.9), rgba(255, 56, 57, 0.8), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 56, 57, 0.9), rgba(255, 56, 57, 0.8), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 56, 57, 0.9), rgba(255, 56, 57, 0.8), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-19:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 82, 56, 0.9), rgba(255, 82, 56, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 82, 56, 0.9), rgba(255, 82, 56, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 82, 56, 0.9), rgba(255, 82, 56, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 82, 56, 0.9), rgba(255, 82, 56, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-18:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 106, 37, 0.9), rgba(255, 106, 37, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 106, 37, 0.9), rgba(255, 106, 37, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 106, 37, 0.9), rgba(255, 106, 37, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 106, 37, 0.9), rgba(255, 106, 37, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-17:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 125, 38, 0.9), rgba(255, 125, 38, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 125, 38, 0.9), rgba(255, 125, 38, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 125, 38, 0.9), rgba(255, 125, 38, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 125, 38, 0.9), rgba(255, 125, 38, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-16:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 159, 48, 0.9), rgba(255, 159, 48, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 159, 48, 0.9), rgba(255, 159, 48, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 159, 48, 0.9), rgba(255, 159, 48, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 159, 48, 0.9), rgba(255, 159, 48, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-15:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 168, 69, 0.9), rgba(255, 168, 69, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 168, 69, 0.9), rgba(255, 168, 69, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 168, 69, 0.9), rgba(255, 168, 69, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 168, 69, 0.9), rgba(255, 168, 69, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-14:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 185, 64, 0.9), rgba(255, 185, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 185, 64, 0.9), rgba(255, 185, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 185, 64, 0.9), rgba(255, 185, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 185, 64, 0.9), rgba(255, 185, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-13:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 202, 66, 0.9), rgba(255, 202, 66, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 202, 66, 0.9), rgba(255, 202, 66, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 202, 66, 0.9), rgba(255, 202, 66, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 202, 66, 0.9), rgba(255, 202, 66, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-12:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 214, 51, 0.9), rgba(255, 214, 51, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 214, 51, 0.9), rgba(255, 214, 51, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 214, 51, 0.9), rgba(255, 214, 51, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 214, 51, 0.9), rgba(255, 214, 51, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-11:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(255, 232, 54, 0.9), rgba(255, 232, 54, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(255, 232, 54, 0.9), rgba(255, 232, 54, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(255, 232, 54, 0.9), rgba(255, 232, 54, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(255, 232, 54, 0.9), rgba(255, 232, 54, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-10:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(245, 255, 79, 0.9), rgba(245, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(245, 255, 79, 0.9), rgba(245, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(245, 255, 79, 0.9), rgba(245, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(245, 255, 79, 0.9), rgba(245, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-9:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(188, 255, 79, 0.9), rgba(188, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(188, 255, 79, 0.9), rgba(188, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(188, 255, 79, 0.9), rgba(188, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(188, 255, 79, 0.9), rgba(188, 255, 79, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-8:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(131, 255, 76, 0.9), rgba(131, 255, 76, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(131, 255, 76, 0.9), rgba(131, 255, 76, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(131, 255, 76, 0.9), rgba(131, 255, 76, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(131, 255, 76, 0.9), rgba(131, 255, 76, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-7:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-6:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(61, 255, 64, 0.9), rgba(61, 255, 64, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-5:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(82, 255, 193, 0.9), rgba(82, 255, 193, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(82, 255, 193, 0.9), rgba(82, 255, 193, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(82, 255, 193, 0.9), rgba(82, 255, 193, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(82, 255, 193, 0.9), rgba(82, 255, 193, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-4:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(82, 255, 238, 0.9), rgba(82, 255, 238, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(82, 255, 238, 0.9), rgba(82, 255, 238, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(82, 255, 238, 0.9), rgba(82, 255, 238, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(82, 255, 238, 0.9), rgba(82, 255, 238, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-3:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(78, 228, 255, 0.9), rgba(78, 228, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(78, 228, 255, 0.9), rgba(78, 228, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(78, 228, 255, 0.9), rgba(78, 228, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(78, 228, 255, 0.9), rgba(78, 228, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-2:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(64, 180, 255, 0.9), rgba(64, 180, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(64, 180, 255, 0.9), rgba(64, 180, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(64, 180, 255, 0.9), rgba(64, 180, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(64, 180, 255, 0.9), rgba(64, 180, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
+        .hot-mask-1:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius:50% 65%;
+            background: -webkit-radial-gradient(rgba(74, 140, 255, 0.9), rgba(74, 140, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -o-radial-gradient(rgba(74, 140, 255, 0.9), rgba(74, 140, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -moz-radial-gradient(rgba(74, 140, 255, 0.9), rgba(74, 140, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+            background: -ms-radial-gradient(rgba(74, 140, 255, 0.9), rgba(74, 140, 255, 0.9), rgba(1, 5, 247, 0.4), rgba(1, 5, 247, 0.3), rgba(1, 5, 247, 0.2), rgba(1, 5, 247, 0.1), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0), rgba(1, 5, 247, 0));
+        }
 
-
-	<!-- Google Tag Manager-->
-	<script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-						new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-NG8NR5');
-	</script>
-	<script>
-		dataLayer.push({ "pageType": "Manage Booking" });
-		dataLayer.push({ "pagePlatform": "Responsive Web" });
-	</script>
-	<!-- End Google Tag Manager-->
-	<script type="text/javascript">(function(){ if (typeof(___zen) === "undefined") {setTimeout(arguments.callee, 50); return; }___zen.hic("__ZEHIC118", 1584698899, 3, 15, 600); })()</script><script type="text/javascript" async="async" src="/__zenedge/assets/hic.js?v=1582810313"></script></head>
+    </style><script charset="UTF-8" src="https://api.geetest.com/reset.php?gt=25ba81caec944f8d74c98befd841a667&amp;challenge=012368e508108ef9b0f04b055509b71a&amp;lang=zh-cn&amp;w=fmSBl9rjzZ6QOpU6cCBYO4Uv2ofXDOnsaqfZWEtINw8tvlezJPOl6NPSIYIsXyLpGnhRlFtCnju5hLEc0EFKf7R2y4rrTrWid0EsouFJAHyS)lQdGgSsTmwqj8CudbRp)R)oyaxAtaEYC0Sa9FA3CxC0D8b0(VCNGCNYjlKCW(iV)9aULD75Qg5BiG1eaM4jh1dXulc7Lv9yFAftUL)ybq)ugskwBJhLwKvgpVOvBLNTWaYur3JeEDm5DNiHJy3CwKa7bJB1BApNVvKm564pekRS0mkVpJwvwwNDj1VcbvhFQs1C1qRMBmLPn9bSjxW8gy5dhmuauteH3MM7FZ(fWPuW0xncdM2oyVZUGwfiRZ3qWJ2pbBLv0tvODTzoV3LZJL3RWY)ue(NKrKF8RMJ5bOZApDfqglj93VLgb(tU63BdHlGtvgdiYB)MBkByHu84ieyfy26Ljn4dFDxJwYoVFY4dCO24slrLwbIsPTPxViUszgkKjLPMPaRuS0A1xbm9qeXqUTAi1irvNRP3meKq1X9kosHZGiGD6hUpqaZabwcCUufwX3OMaxoklLJxTEG9MyFMfXbSto(1AtzSPVRhkrRlYUzdJikSwuVcVqAQIrfZy9TC0zQ(2PdzuOy5eoP5pwtUONdbhvrYCsc9O82O38gZqhSa5DM3KwLQiMDuGZlhwm4EJRQWosz9ITAx5l9DgsgA3uigvLl7Q7dXuLg5PhTfqJC9i(DCBUpuO)XRBoXPd0umaxiG)WqeD2xSi58nH6GRZF0Q)y2CWVf4QHcXC4lr7eN)(gJDZev42yj2gEGpnFeewCNbsuiI46BRXnGJyWVXQXNJeG45u0AZhfrFcHNMtGmdtHU(B5pp8dQf3YGVAMZc8RFsnhbhQqA)R5etRRmCvC9PtcdtEK0YOWYne3oCtO29egyxq3PTx50rF7XnXjOtm4NuGLm4PCVenNavnwN)iam1)xRcsY8BbqHgFLOFLxpxYBQ5Um42ySKLS3k)xkdDmXL1E(tzD)vgdb1eJp(c55kZi(ws3THAC9LXV9jcbw8ckjar0z62sgblEH9GRqPX2AcEHgpjA)2J2IEtrl2a2nt9PDT0vaOxM38jJyqpLhAV4vQQKnOjFW7QEBO2k)Zf1ykEHfEx05RVPfUc2ywLfQHsFFU(BsH9Fv0KP)pF3nAjaVcSiXmeiZIVb0IHOZcaR2zC1dijFcDrbvHp7kZJJK8iwmDPzDsqZ)AiaphmhJXOi1O0ZJw9wqUnV4lB(WnKgoYqP6FCAvIaExKrtrm)nJl2hAU2Dq0XOto5DLhbXZ41vSZ83I6KTcZgtvDmEoNARSMjyfIKMUgKXW)2Im111y62)Uo1Kzk8k8Kv2qUikX4nwQPLDWpporphBAeAyItDfXSkdLsy)DG6SFzuDDO4vl3G9j8f6gEcb)s38rIqhxRbGvOmaqqreu8(OClGoM16s2uWUfyzVwMJw6LJjEnNepCHY05b9SOkgW(X)qt6cMejoNf7VPfBbbujbxu3P4v0etfQRQlqhwJ0rIEIeq6nvgOcxPopK88xZWhj(7ng2ofaNGiUnBcguv0z6GruYo(UdleVQhr82ScKQAfkHjFaBX7Meby5tgYR39Lm(g..53c1bbd869c5e6c9736defa32ee16e394fb35a516a1782fc2b5f0e9cbbbe6fe5c51ed49f46460c68630ca5e3cdf7f5dee3d6210b2c3c6be35f8e6eca1bbc05de944a23df7121f9ff4ef125bc174aeaa98ef497e67b1abcbec82884cd0927f233590d4d8485c68f9dbc93dcd78e8c39951450be431a43895d86eed76cbb95417b&amp;pt=0&amp;client_type=web&amp;callback=geetest_1594200000472"></script></head>
 <body>
-<!-- Google Tag Manager (noscript)-->
-<noscript>
-	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG8NR5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>    <!-- End Google Tag Manager (noscript)-->
-
-<input type="hidden" class="bookingKey" name="bookingKey" value="5J~5227~ ~~SZX~01/14/2020 03:20~MNL~01/14/2020 05:45~~YAN LI~MING FEI REN~YAN LI~" />
-
-
-
-
-<!--Google tag manager datalayer-->
-<!--End Google tag manager datalayer-->
-
-<div id="surveyboxWrap" display-survey="True"></div>
-
-
-
-
-
-<script type="text/javascript">
-
-	(function () {
-		var s = document.createElement('script');
-		s.type = 'text/javascript'; s.async = true;
-		s.innerHTML = 'CIDatalayer = {"channel":"WEB","language":"EN","currency":"PHP","page":"MMB","pos":"cebu.ph","reference_id":"NL52FH","member_logged_in":false,"member_email":"nevergiveup17apr04@qq.com"};';
-		var j = document.getElementsByTagName('script')[0]; j.parentNode.insertBefore(s, j);
-	})();
-
-
-
-	(function () {
-		var v1 = '', v2 = '', v3 = '', v4 = '', v5 = '', v6 = '', v7 = '', v8 = '', v9 = '';
-		var OB_P_ADT = CIDatalayer.outbound_flight_product ? CIDatalayer.outbound_flight_product.outbound_price_adult : CIDatalayer.outbound_price_adult;
-		var OB_P_CHD = CIDatalayer.outbound_flight_product ? CIDatalayer.outbound_flight_product.outbound_price_child : CIDatalayer.outbound_price_child;
-		var OB_P_INF = CIDatalayer.outbound_flight_product ? CIDatalayer.outbound_flight_product.outbound_price_infant : CIDatalayer.outbound_price_infant;
-		var IB_P_ADT = CIDatalayer.inbound_flight_product ? CIDatalayer.inbound_flight_product.inbound_price_adult : CIDatalayer.inbound_price_adult;
-		var IB_P_CHD = CIDatalayer.inbound_flight_product ? CIDatalayer.inbound_flight_product.inbound_price_child : CIDatalayer.inbound_price_child;
-		var IB_P_INF = CIDatalayer.inbound_flight_product ? CIDatalayer.inbound_flight_product.inbound_price_infant : CIDatalayer.inbound_price_infant;
-		var totalOutboundPrice = OB_P_ADT + OB_P_CHD + OB_P_INF;
-		var totalinboundPrice = IB_P_ADT + IB_P_CHD + IB_P_INF;
-		if (isNaN(totalinboundPrice)) {
-			totalinboundPrice = '';
-		}
-
-		if (CIDatalayer.page == "select" ||
-				CIDatalayer.page == "customerselect") {
-			v1 = CIDatalayer.origin;
-			v2 = CIDatalayer.destination;
-			v3 = CIDatalayer.adults + CIDatalayer.children + CIDatalayer.infants;
-			v7 = CIDatalayer.start;
-			v8 = CIDatalayer.end;
-			v9 = CIDatalayer.flight_type;
-		}
-		else if (CIDatalayer.page == "guest" ||
-				CIDatalayer.page == "extras" ||
-				CIDatalayer.page == "ancillary" ||
-				CIDatalayer.page == "customerguest" ||
-				CIDatalayer.page == "passengers" ||
-				CIDatalayer.page == "farerulespayment" ||
-				CIDatalayer.page == "customerfarerulespayment" ||
-				CIDatalayer.page == "itinerary" ||
-				CIDatalayer.page == "customeritinerary" ||
-				CIDatalayer.page == "payment" ||
-				CIDatalayer.page == "new" ||
-				CIDatalayer.page == "booking") {
-			v1 = CIDatalayer.origin;
-			v2 = CIDatalayer.destination;
-			v3 = CIDatalayer.adults + CIDatalayer.children + CIDatalayer.infants;
-			v4 = totalOutboundPrice;
-			v5 = totalinboundPrice;
-			v6 = CIDatalayer.currency;
-			v7 = CIDatalayer.start;
-			v8 = CIDatalayer.end;
-			v9 = CIDatalayer.flight_type;
-		}
-
-		dataLayer.push({
-			'u1': v1,
-			'u2': v2,
-			'u3': v3,
-			'u4': v4,
-			'u5': v5,
-			'u6': v6,
-			'u7': v7,
-			'u8': v8,
-			'u9': v9,
-			'event': "event trigger " + CIDatalayer.page
-		});
-
-	})();
-</script>
-
-<div id="loadingDimmer" role="alertdialog" aria-busy="false" aria-live="assertive"></div>
-<!-- WCAG: added tabindex -2 for loadingImage so whenever it appears,
-     active element will be focused on the alternative text of this image -->
-<div id="loadingImage" tabindex="-2">
-	<span class="img-label-wcag-hidden label">PageIsLoading</span>
-</div>
-
-
-
-<div class="summary-overlay hide"></div>
-
-<!--start: header -->
-<header>
-	<div class="container-fluid headerContainer">
-		<div class="row">
-			<div class="col-xs-4 cebuPacificLogo">
-				<div>
-					<a title="CEBU PACIFIC" href="https://www.cebupacificair.com/"><img alt="CEBU PACIFIC" src="/Images/CebuPacific/logo.png" class="img-responsive"></a>
-				</div>
-				<a href="#main-content" class="skipToMainContent">Skip to Main Content</a>
-			</div>
-			<div class="col-xs-8 headerNavigation">
-
-				<div class="menuBar col-xs-8">
-    <span class="checkIn">
-<a href="/CheckIn/Retrieve">Check-In</a>    </span>
-					<span class="manage-booking">
-<a href="/Manage/Retrieve">Manage Booking</a>    </span>
-					<span class="flightStatus">
-            <a href="https://www.cebupacificair.com/Pages/flight-status">
-                Flight Status
+<div class="g-header J-header" style="display:block;">
+    <div class="g-wp f-cb">
+        <h1 class="logo">
+            <a href="https://www.ch.com">
+                <img src="https://media.springairlines.com/cache/style/site5/img/logo.png?vs=20160805?vs=1" alt="" height="56">
             </a>
-        </span>
-
-
-
-
-
-				</div>
-				<div class="loginBar">
-                <span class="hiGreeting">
-
-                            <a href="#" id="hiGuestLink" data-dialogclass="login-dialog">
-                                Hi Guest!
-                            </a>
-                </span>
-					<span class="signIn">
-                            <a href="#" id="signInLink" data-dialogclass="login-dialog" role="button" aria-expanded="false"><span>SIGN IN</span></a>
-                </span>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-	<div id="cebJourneyDialog" class="container-fluid headerDialog cebJourneyDialog">
-		<div class="row">
-			<div class="col-xs-4 inspirationCol">
-				<div class="row inspirationHead">
-					<div class="col-xs-12 inspirationHeadRow">
-						<div class="row">
-							<div class="inspirationHeadImage sprite-common ico_cebJourney-inspiration"></div>
-							<h3 class="cebJourneyHeadText">INSPIRATION</h3>
-						</div>
-
-
-					</div>
-				</div>
-				<div class="row inspirationContent">
-					<div class="col-xs-5 inspirationContentMargin"></div>
-					<div class="col-xs-7">
-						<div class="cebJourneyBodyText"><a href="#">Waytogo</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Our Network</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-8 experienceCol">
-				<div class="row experienceColHead">
-					<div class="sprite-common ico_cebJourney-experience"></div>
-					<h3 class="cebJourneyHeadText">EXPERIENCE</h3>
-				</div>
-				<div class="row experienceContentHead">
-					<div class="col-xs-4">
-						<div class="experienceContentHeadText cebJourneyBodyText">Before I Fly</div>
-					</div>
-					<div class="col-xs-4">
-					</div>
-					<div class="col-xs-4">
-						<div class="experienceContentHeadText cebJourneyBodyText">When I Fly</div>
-					</div>
-				</div>
-				<div class="row experienceContent">
-					<div class="col-xs-4">
-						<div class="cebJourneyBodyText"><a href="#">Ceb Mobile App</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Add-Ons</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Fares and Fees</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Payment Options</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Baggage Info</a></div>
-					</div>
-					<div class="col-xs-4">
-						<div class="cebJourneyBodyText"><a href="#">Travel Reminders</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Fast Check-in Option</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Conditions of Carriage</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Cargo</a></div>
-						<div class="cebJourneyBodyText"><a href="#">Customer Care</a></div>
-					</div>
-					<div class="col-xs-4">
-						<div class="cebJourneyBodyText">Fun Shop</div>
-						<div class="cebJourneyBodyText">Duty Free</div>
-						<div class="cebJourneyBodyText">Ceb Wifi OnAir</div>
-						<div class="cebJourneyBodyText">Cabin Sneak Peak</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><form action="/Member/HeaderLogin" autocomplete="off" id="memberLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="806RO-lunZlUN1FgqBwv8FpXUKjY51MB_WaZ8sprURBkNZ9nAmJQkM5Ng5tO08V1JjWVak3Jtoz4eQj4Fum2WtwH8AksKlpX7OrPCBbD3nEfcqzupA2LxiFQ3sB8EwKQ4RsRcQ2" />        <div id="login-dialog" class="container-fluid headerDialog login-dialog">
-	<div class="row">
-		<!-- GetGo extra info section -->
-		<div class="col-md-5 col-xs-5 login-dialog-getGoExtraInfo">
-			<div class="row login-dialog-getGoHeader">
-				<div class="col-md-4 col-xs-4">
-					<img src="/Images/CebuPacific/guest-details/getgo.png" class="img-responsive" alt="GetGo" />
-				</div>
-				<div class="col-md-8 col-xs-8">
-					<span class="">Log in with your GetGo account for faster and easier booking transaction!</span>
-				</div>
-			</div>
-			<div id="firstBullet" class="row login-dialog-bullets">
-				<div class="col-md-12 col-xs-12">
-					<div class="sprite-common ico_purple-check"></div>
-					<span>Earn points while you book your Cebu Pacific flights!</span>
-				</div>
-			</div>
-			<div class="row login-dialog-bullets">
-				<div class="col-md-12 col-xs-12">
-					<div class="sprite-common ico_purple-check"></div>
-					<span>Easy breezy booking!</span>
-				</div>
-			</div>
-			<div class="row login-dialog-bullets">
-				<div class="col-md-12 col-xs-12">
-					<div class="sprite-common ico_purple-check"></div>
-					<span>Pay securely in just one click!</span>
-				</div>
-			</div>
-			<div class="row login-dialog-learnMore">
-				<div class="col-md-12 col-xs-12">
-					<a class="login-dialog-learnMore" data-ga-event-action="Click" data-ga-event-category="Button" data-ga-event-label="Learn More about GetGo" href="//www.getgo.com.ph/" target="_blank">Learn More about GetGo</a>
-				</div>
-			</div>
-		</div>
-		<!-- Login details section -->
-		<div class="col-md-7 col-xs-7 login-dialog-loginDetails">
-			<div class="row">
-				<div class="col-md-9 col-xs-9 login-dialog-loginDetailsHeader">
-					<span class="">Enter the following</span>
-				</div>
-				<div id="login-dialog-close" class="col-md-3 col-xs-3 login-dialog-close">
-					<div class="pull-right sprite-common ico_loginClose"></div>
-					<a href="#" class="pull-right">Close</a>
-				</div>
-			</div>
-			<div class="row login-dialog-email">
-				<div class="col-md-9 col-xs-8">
-					<div class="float-labels-container">
-						<input id="cebMemberLogin_Username" class="cssF2 cssF2-large float-labels-input" type="email" placeholder="Email" title="Email" aria_label="Email" value="" type="text" name="cebMemberLogin.Username" /><label class="float-labels-label float-labels-label-large" for="cebMemberLogin_Username">Email</label>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-4">
-				</div>
-			</div>
-			<div class="row login-dialog-password">
-				<div class="col-md-9 col-xs-8">
-					<div class="float-labels-container">
-						<input id="cebMemberLogin_Password" class="cssF2 cssF2-large float-labels-input" type="password" placeholder="Password" title="Password" autocomplete="off" aria_label="Password" value="" type="text" name="cebMemberLogin.Password" /><label class="float-labels-label float-labels-label-large" for="cebMemberLogin_Password">Password</label>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-4 login-dialog-submit">
-					<button class="btn btn-lg btn-blue btn-icon btn-alt btn-block removeUnloadConfirm" data-ga-event-action="Click" data-ga-event-category="Button" data-ga-event-label="Manage_Index_LOG IN" type="submit">                                    <span class="glyphicon glyphicon-menu-right glyphicon-flush-right" aria-hidden="true"></span>
-						<span>LOG IN</span>
-					</button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-xs-4 login-dialog-forgotPassword">
-					<a data-ga-event-action="Click" data-ga-event-category="Button" data-ga-event-label="Manage_Index_Forgot your password?" href="//beta.getgo.com.ph/member/forgot-password" target="_blank">Forgot your password?</a>
-				</div>
-				<div class="col-md-5 col-xs-4 login-dialog-signUp">
-					<a data-ga-event-action="Click" data-ga-event-category="Button" data-ga-event-label="Manage_Index_Not yet a member? Join GetGo" href="//www.getgo.com.ph/member/quick-enroll-login?tab=1" target="_blank">Not yet a member? Join GetGo</a>
-				</div>
-				<div class="col-md-3 col-xs-8">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</form>
-
-	<div class="primary-nav">
-
-	</div>
-
-</header>
-<!--end: header -->
-
-<section>
-</section>
-
-<section class="container" tabindex="-1" id="main-content" name="main-content">
-
-	<div class="page-container cf">
-
-
-		<form action="/Manage" class="removeUnloadConfirm" id="ManageBookingForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="yYyl6ymgEPaUB5yNIkX-X9y_EGHvR2wgt6QOf_WxtzEyDyzDXmKHxkSu1Jg9JVt8j9OmNGVK7509xENAu0OKJxLtHqgWMZX1Vic1L1G9e15tIHQOjP5EiEo3sQd9s6jJYB7DMQ2" />            <div class="manage-container cf">
-			<div class="manage-container-head row">
-				<div class="col-xs-9">
-					<div class="col-xs-12">
-						<h2>Welcome back, MING FEI!</h2>
-					</div>
-
-				</div>
-				<div class="manage-overview col-xs-3">
-					<div class="col-xs-12">
-
-
-						<div class="booking-overview">
-							<div class="booking-summary">
-								<div class="booking-summary-section">
-									<h5 class="reset">Booking Reference</h5>
-									<h3 class="reset">NL52FH</h3>
-								</div>
-
-								<div class="booking-summary-section">
-									<h5 class="reset">Booking Date</h5>
-									<p class="reset" data-utc-time="10.01.2020 05:21" data-datetime-jsformat="ddd, DD MMM YYYY">Fri, 10 Jan 2020</p>
-								</div>
-
-								<div class="booking-summary-section">
-									<h5 class="reset">Status</h5>
-									<p class="reset">confirmed</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="booking-overview">
-							<div class="col-xs-12 manage-link text-center">
-								<a href="/Booking/Retrieve">Manage A Different Booking</a>    </div>
-						</div>
-					</div>
-				</div>
-				<div class="manage-container-body-header col-md-8 col-lg-8">
-					<h3>What do you want to do with your booking?</h3>
-					<hr class="hr-hidden">
-					<div class="manage-flight-banner">
-						<div class="flight-banner-take-note">Take Note:</div>
-						<div class="cols-xs-12 flight-disruption-banner-container">
-							Flights on this booking have been changed.
-							<a href="/Disruption" target=""><u>View Your New Travel Details!</u></a>
-						</div>
-
-					</div>
-					<div class="manage-option-select-container cf" role="tablist" id="manage-option-select-container">
-						<!--javascript setsize & posinset-->
-						<div tabindex="0" class="manage-option print-view-itinerary cssRadio2 radio-click"
-							 id="tab-viewitinerary"
-							 role="tab"
-							 aria-controls="tabpanel-viewitinerary"
-							 aria-selected="false"
-							 aria-label="Print or View my Itinerary">
-							<span for="tab-viewitinerary">Print or View my Itinerary</span>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-
-			<div class="manage-container-body">
-
-				<hr class="hr-small hr-hidden">
-				<div class="collapse-container manage-option-container view-itinerary-container" style="display: none" role="tabpanel" aria-labelledby="tab-viewitinerary" id="tabpanel-viewitinerary" aria-expanded="false">
-					<div class="collapse-header">Don&#39;t forget to check in online!</div>
-					<div class="collapse-content"><div class="row view-itinerary">
-						<div class="col-xs-12">
-
-							<div class="print-itinerary">
-								<div class="container" tabindex="-1" id="print-itinerary-main-content" name="print-itinerary-main-content">
-									<!-- start: header -->
-									<div class="row header-row">
-										<div class="header-items">
-											<div class="pull-left"><img alt="CEBU PACIFIC" src="/Images/CebuPacific/logo.png" tabindex="0" /></div>
-											<div class="pull-right"><h1>ITINERARY RECEIPT</h1></div>
-										</div>
-									</div>
-									<!-- end: header -->
-									<br />
-									<!-- start: Booking Details -->
-									<div class="row">
-										<div class="col-xs-9">
-											<br />
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Booking Details</div>
-											<div class="table print-booking-details">
-												<div class="col-xs-4">
-													Status: <br />
-													<strong>CONFIRMED</strong>
-												</div>
-												<div class="col-xs-4">
-													Booking Date: <br />
-													<strong data-utc-time="10.01.2020 05:21" data-datetime-jsformat="ddd. DD MMM. YYYY">Fri. 10 Jan. 2020</strong>
-												</div>
-
-												<div class="booking-reference col-xs-4 wcag-header-label-blue">
-													<span role="heading" aria-level="3">Booking Reference:</span> <br />
-													<strong>NL52FH</strong>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-3">
-											<div class="barcode">
-												<img class="img-responsive" src="/Images/CebuPacific/itinerary/barcode-head.png" alt="" />
-												<img class="img-responsive" src="/Barcode/GenerateBarcode?payload=NL52FH" alt="Barcode" />
-											</div>
-										</div>
-									</div>
-									<!-- end: Booking Details -->
-									<br />
-									<!-- start: Flight Details -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Flight Details</div>
-											<table class="table print-flight-details">
-												<thead>
-												<tr>
-													<th class="flight-number" scope="col">Flight No./ Airline</th>
-													<th scope="col">Departure</th>
-													<td></td>
-													<th scope="col">Arrival</th>
-												</tr>
-												</thead>
-												<tbody>
-												<tr>
-													<td>
-														<p class="carrier-name">Cebu Pacific Air</p>
-														<p class="flight-number"><img src="/images/CebuPacific/itinerary/carriercode.png" class="carrier-code-image" alt="" />5J 5227</p>
-													</td>
-													<td>
-														<big>Shenzhen</big> | <big>SZX</big> <br />
-														Shenzhen Bao&#39;an International Airport<br />
-														Tue. 14 Jan. 2020, 0320H (03:20AM)
-													</td>
-													<td> <img src="/images/CebuPacific/itinerary/journeyarrow.png" class="journey-arrow" alt="to" /></td>
-													<td>
-														<big>Manila</big> | <big>MNL</big> <br />
-														Ninoy Aquino International Airport Terminal 3<br />
-														Tue. 14 Jan. 2020, 0545H (05:45AM)
-													</td>
-												</tr>
-												<tr class="table-hr">
-													<td colspan="4">
-														<hr />
-													</td>
-												</tr>
-												</tbody>
-											</table>
-
-										</div>
-									</div>
-									<!-- end: Flight Details -->
-									<!-- start: Reminders -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Reminders</div>
-											<div class="print-reminders">
-												<div class="row reminder-content">
-													<div class="col-xs-12">
-														Guests booked on Cebu Pacific’s interline partners may need to transfer airport terminals when transiting via Manila. Please proceed to the transit area for the free Manila International Airport Authority shuttle service from 05:30 AM to 01:00 AM of the following day. The MIAA shuttle leaves every 30 to 40 minutes.
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- end: Reminders -->
-									<br />
-									<!-- start: Ads 1 -->
-									<div class="inktad-banner row">
-										<div class="col-xs-12">
-											<a href="https://ads.inktad.com/cebu-pacific-air/link?uniqueid=NL52FH&amp;mediaName=itinerary-web&amp;slotName=banner&amp;orig=SZX&amp;dest=MNL&amp;departureDate=2020-01-14&amp;age=24&amp;nationality=CN&amp;gender=female&amp;lang=EN" target="_blank">
-												<img class="img-responsive center-block" src="https://ads.inktad.com/cebu-pacific-air/image?uniqueid=NL52FH&amp;mediaName=itinerary-web&amp;slotName=banner&amp;orig=SZX&amp;dest=MNL&amp;departureDate=2020-01-14&amp;age=24&amp;nationality=CN&amp;gender=female&amp;lang=EN" alt="Banner Ad" />
-											</a>
-										</div>
-									</div>
-
-
-									<!-- end: Ads 1 -->
-									<!-- start: Guest Details -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Guest Details</div>
-											<table class="table print-guest-details">
-												<thead>
-												<tr>
-													<th colspan="1" scope="col">Name and Add Ons</th>
-												</tr>
-												</thead>
-												<tbody>
-												<tr class="col-xs-12 col-lg-6 guest-padding">
-													<td>
-														1. Ms YAN LI (Adult)
-													</td>
-												</tr>
-												<tr class="col-xs-12 col-lg-6 guest-padding">
-													<td class="col-xs-12 pull-left ">
-														<strong>Shenzhen - Manila </strong><br />
-														Seat  12J  <br />
-														Checked Baggage Allowance - up to 2 pieces, total 20 Kilos  <br />
-
-													</td>
-												</tr>
-												<tr class="table-hr">
-													<td class="pax-separator">
-														<hr />
-													</td>
-												</tr>
-												</tbody>
-											</table>
-
-										</div>
-									</div>
-									<!-- end: Guest Details -->
-									<div class="row">
-										<div class="farebreakdown-custom-col col-xs-5">
-
-
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Fare Breakdown</div>
-											<table class="table print-farebreakdown-details">
-												<thead>
-												<tr>
-													<th scope="col">Details</th>
-													<th scope="col">Amount</th>
-												</tr>
-												</thead>
-												<tbody>
-												<tr>
-													<td>Fare, Taxes and Fees:</td>
-													<td></td>
-												</tr>
-												<tr>
-													<td class="fees-and-taxes">
-														Base Fare            </td>
-													<td>
-														PHP 1,288.00            </td>
-												</tr>
-												<tr>
-													<td class="fees-and-taxes">Administrative Fee</td>
-													<td>
-														300.00                </td>
-												</tr>
-
-												<tr>
-													<td class="fees-and-taxes">Fuel Surcharge </td>
-													<td>
-														265.00                </td>
-												</tr>
-												<tr>
-													<td class="fees-and-taxes">Airport Fee</td>
-													<td>
-														658.58                </td>
-												</tr>
-
-
-
-												<tr>
-													<td>Add Ons:</td>
-													<td></td>
-												</tr>
-												<tr>
-													<td class="add-ons">Prepaid Baggage</td>
-													<td>
-														850.00                        </td>
-												</tr>
-
-
-
-
-												<tr class="table-hr">
-													<td colspan="2">
-														<hr />
-													</td>
-												</tr>
-												</tbody>
-
-											</table>
-										</div>
-
-										<div class="paymentdetails-custom-col col-xs-7 remove-left-pad">
-											<div class="panel-header wcag-header-label-blue" role="heading" aria-level="2">Payment Details</div>
-											<table class="print-payment-details">
-												<thead>
-												<tr>
-													<th scope="col">Date</th>
-													<th scope="col">Trans.ID</th>
-													<th scope="col">Type</th>
-													<th scope="col">Amount</th>
-													<th scope="col">Status</th>
-												</tr>
-												</thead>
-												<tbody>
-												<tr>
-													<td><span data-utc-time="10.01.2020 05:21" data-datetime-jsformat="MM/DD/YYYY">01/10/2020</span></td>
-
-													<td>216075065</td>
-													<td>Master Card (MC)</td>
-													<td>
-														PHP 3,361.58
-
-													</td>
-													<td>APPROVED</td>
-												</tr>
-												<tr>
-													<td colspan="3"></td>
-													<td colspan="2"><a href="https://receipt.cebupacificair.com/ReceiptHelper4x/ORGeneratorA.aspx?22~/MV28yV8icE7I6tDwevKTAuterkSQ0XGr9xIbZgQ6E2nM5RzYbN9UfpNyeT1FTaiFzcjJMIgwvLYxOY1cacym1CiLgWeD9Sgc=" onclick="window.open(this.href, 'CebuPacific', 'width=1200,height=600,toolbar=0,status=0,location=0,menubar=1,scrollbars=1,resizable=1'); return false;">Print Official Receipt</a></td>
-												</tr>
-												<tr class="table-hr">
-													<td colspan="5">
-														<hr>
-													</td>
-												</tr>
-												</tbody>
-											</table>
-											<div class="trivia-box">
-    <span class="trivia-header reset">
-        <img src="/Images/CebuPacific/itinerary/triviabulb.png" alt=""/> Did you know?
-    </span>
-												<p>
-													You can be insured for as low as <strong>PHP280</strong>. Small price to pay but with great insurance coverage! Visit our website and click TravelSure.
-												</p>
-											</div>
-										</div>
-									</div>
-									<br />
-									<!-- start: Travelsure Ads -->
-									<div class="row">
-										<div class="col-xs-12">
-											<a href="https://www.cebupacificair.com/pages/plan-trip/add-ons/travelsure" target="_blank"><img class="img-responsive center-block" src="/Images/CebuPacific/itinerary/travelsure-ads.jpg" alt="Cover your trip with Travel Insurance. Personal Accident, Travel Inconveniences, Medical and Evaluation Expenses. We provide medical treatment coverage of USD 5000 or more. Get it now." /></a>
-										</div>
-									</div>
-									<!-- end: Travelsure Ads -->
-									<br />
-									<br />
-									<!-- start: GetGo -->
-
-									<!-- end: GetGo -->
-									<!-- start: Fare Rules -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="itinerary-fare-rules">
-												<h2 class="itinerary-full-header header wcag-header-label-blue">
-													Fare Rules
-												</h2>
-												<div class="content">
-
-
-													<div class="recap-panel-guidelines">
-														<div class="fare-rules-content">
-															<div class="fare-rule-journey fare-rule-depart-journey">
-																<div class="journey-info">
-																	<div>Departure</div>
-																	<div>
-																		<div class="flight-details">
-																			Shenzhen to Manila
-																		</div>
-																	</div>
-																	<div class="fare-header">The following applies to GO Basic Fare</div>
-																</div>
-																<ul class="fare-rules">
-																	<li class="fare-rule"><span>Cancellation / Rerouting</span> - Not allowed.</li>
-																	<li class="fare-rule"><span>Rebooking</span> - Free rebooking up to two (2) times for guests who purchased CEB Flexi ONLY. (Fare difference may apply.) Guests with no CEB Flexi add-on are allowed to rebook, but subject to applicable fees and penalties.</li>
-																	<li class="fare-rule"><span>No Show</span> - Fares and all other fees are forfeited or considered flown.</li>
-																	<li class="fare-rule"><span>Name Change</span> - Not allowed.</li>
-																	<li class="fare-rule"><span>Baggage Allowance</span> - Not included. You may purchase this via the 'Manage Booking' page on our website.</li>
-																	<li class="fare-rule"><span>Seats</span> - Not included. You may purchase this via the 'Manage Booking' page on our website.</li>
-																</ul>
-
-															</div>
-														</div>
-													</div>
-
-													<span>NOTE: </span><br>
-
-													For complete summary of applicable fees, taxes and surcharges, please check out <a href="https://www.cebupacificair.com/Pages/fees-summary" target="_blank">Fees Summary</a>. Carriage of passenger and baggage is subject to the Terms and Conditions of Carriage approved by the Civil Aeronautics Board. For complete Terms and Conditions of Carriage, please refer to <a href="https://www.cebupacificair.com/pages/plan-trip/conditions-of-carriage" target="_blank">Cebu Pacific’s Conditions of Carriage</a>.
-												</div>
-											</div>
-
-										</div>
-									</div>
-									<!-- end: Fare Rules -->
-									<br />
-									<!-- start: Check-in Guidelines -->
-									<div class="row">
-										<div class="col-xs-12">
-
-											<div class="itinerary-checkin-guidelines">
-												<h2 class="itinerary-full-header header wcag-header-label-blue">
-													Check-in Guidelines
-												</h2>
-												<div class="content row">
-													<div class="col-md-6">
-														<h3>Booking Changes</h3>
-														<p>Changes must be done more than 1 hour before the flight subject to penalties and fare difference.</p>
-														<h3>Online check-in</h3>
-														<p>Check in through the Cebu Pacific mobile app or website to get your seat number and boarding pass.</p>
-														<p>Mobile and web check-in options are available as early as 7 days before the flight. For domestic travel, you have until 1 hour before the flight to do your online check-in, and it’s up to 4 hours before the flight for international travel.</p>
-														<h3>Airport counters and boarding gates</h3>
-														<p>Bag Drop and check-in counters open as early as 3 hours before your flight. Check-in and boarding times vary and depend on the airport of departure.</p>
-														<p>Counter and Bag Drop closure</p>
-														<ul><li><b>Flights leaving Dubai, Macau, and Shanghai:</b> 1 hour before flight departure</li><li><b>All other flights:</b> 45 minutes before departure</li></ul>                                    <p>After check-in, you must be at your designated boarding gate 45 minutes before the scheduled time of departure.</p>
-														<p>Guests will not be allowed to take the flight after check-in counters and boarding gates close.</p>
-														<p>For guests with Interline itineraries, the Operating Carrier’s check-in and boarding times apply.</p>
-														<h3>Valid Photo ID</h3>
-														<p>For guests with Interline itineraries, the Operating Carrier’s check-in and boarding times apply.</p>
-													</div>
-													<div class="col-md-6">
-														<h3>Prepaid Baggage</h3>
-														<p>Purchase Prepaid Baggage up to 2 hours before your flight.</p>
-														<p>Bags for check-in must not exceed 30 kilos per piece, and not contain fragile or valuable items. You may carry one item inside the aircraft cabin, provided it weighs 7 kilos or less.</p>
-														<h3>Travel documents</h3>
-														<p>International travelers must present valid passports and applicable visas. Cebu Pacific is a point-to-point carrier so please ensure that you have all the necessary visas or documents required for entry to the destination indicated on your Cebu Pacific itinerary.</p>
-														<ul><li>Those connecting via Dubai may avail of baggage transfer services 24 hours before arrival.</li><li>All passengers flying into Sydney must clear immigration upon arrival. Those who have onward connections to a third country will not be able to use transit facilities and cannot avail of the transit-without-visa privilege, regardless of their connecting time.</li></ul>                        <h3>Philippine Travel Tax</h3>
-														<p>Philippine passport holders are required to pay for the Philippine Travel Tax amounting to Php1,620 when traveling internationally from the Philippines. For bookings made online or through the call center, you may pay through TIEZA (Tourism Infrastructure and Enterprise Zone Authority) website or at their booth on the day of travel.</p>
-														<h3>Terms and conditions</h3>
-														<p>You may view the full Cebu Pacific and Cebgo Terms and Conditions by going to <a href="https://www.cebupacificair.com/pages/plan-trip/conditions-of-carriage"  target="_blank" >https://www.cebupacificair.com/pages/plan-trip/conditions-of-carriage</a>  and your Air Passenger Rights here: <a href="http://www.cab.gov.ph/downloads/air-passenger-bill-of-rights">http://www.cab.gov.ph/downloads/air-passenger-bill-of-rights </a></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- end: Check-in Guidelines -->
-									<br />
-									<!-- start: Ads 3 -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div>
-
-												<a target="_blank" href="https://www.cebupacificair.com/pages/plan-trip/fast-check-in-options/web-online-mobile">
-													<img class="img-responsive center-block" src="/Images/CebuPacific/itinerary/checkin-banner.png" alt="Jet me there faster! Start your trip the easy way! Beat the queues with our check-in options including web, Mobile-app, Agent Express and Soft Check-in Kiosk. Click now." />
-												</a>
-											</div>
-										</div>
-									</div>
-									<!-- end: Ads 3 -->
-									<br />
-									<br />
-									<!-- start: Bill of Rights -->
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="itinerary-bill-of-rights">
-												<div class="itinerary-full-header wcag-header-label-blue">
-													<h2>Air Passenger Bill of Rights</h2>
-												</div>
-												<div class="content">
-													<em>visit: <a href="http://www.cab.gov.ph/downloads/air-passenger-bill-of-rights" target="_blank">http://www.cab.gov.ph/downloads/air-passenger-bill-of-rights </a></em>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- end: Bill of Rights -->
-									<br />
-									<!-- start: Footer -->
-									<div class="row">
-										<div class="col-xs-12 itinerary-footer">
-											<div>
-												<div class="h4"><em>Thank you for choosing to fly with Cebu Pacific</em></div>
-											</div>
-											<img src="/Images/CebuPacific/itinerary/footerplane.png" alt="" />
-										</div>
-									</div>
-									<!-- end: Footer -->
-								</div>
-							</div>
-
-						</div>
-					</div>
-						<div class="row print-itinerary-buttons">
-							<div class="col-xs-12 text-center">
-								<a class="btn btn-blue btn-rounded" href="/Booking/Print" target="_blank">PRINT ITINERARY</a>
-							</div>
-						</div></div>
-				</div>
-
-			</div>
-
-			<div class="nav-bottom row">
-				<hr class="hr-hidden">
-
-				<div class="col-xs-3 pull-left back-button-container">
-				</div>
-
-				<div class="col-xs-3 text-right pull-right continue-button-container">
-					<button class="btn btn-blue btn-rounded btn-icon submitButtonClick submitButtonClick" data-ga-event-action="Click" data-ga-event-category="Button" data-ga-event-label="Manage_Index_Continue" id="submit_manage_button" name="continue" type="submit">Continue                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-					</button>        </div>
-				<div class="col-xs-3 pull-right text-right reset-changes-container">
-				</div>
-				<!-- Start of Reset Changes confirmation modal box-->
-				<div class="modal proceed-modal fade" id="resetChangesConfirmationModal" tabindex="-1" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
-					<div class="modal-dialog" role="dialog">
-						<div class="modal-content">
-							<div class="modal-header modal-header-reset-changes-confirmation">
-								<img src="/Images/CebuPacific/add-ons/exclamation_point.png" alt="!">
-							</div>
-							<div class="modal-body modal-body-reset-changes-confirmation">
-								<h4>
-									This will reset the changes that you have made. Do you want to continue?
-								</h4>
-							</div>
-							<div class="modal-footer modal-footer-reset-changes-confirmation">
-								<button type="button" class="btn btn-gray btn-rounded cancelResetChangesBtn btn-default removeUnloadConfirm" data-dismiss="modal">No</button>
-								<button type="button" class="btn btn-primary btn-rounded confirmResetChangesBtn removeUnloadConfirm" data-dismiss="modal">Yes</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- End of Reset Changes confirmation modal box-->
-
-
-			</div>
-
-		</div>
-		</form>        </div>
-
-</section>
-<!--start: footer -->
-
-<footer>
-	<div class="footer-main">
-		<div class="footer-container">
-			<div class="footer-row row cf">
-				<div class="col-xs-6 col-main">
-					<div class="row">
-						<div class="col-xs-12">
-							<ul class="list-inline">
-								<li><div class="footer-logo left cebupacific"></div></li>
-								<li class="center"><div class="footer-logo left valuealliance"></div></li>
-								<li class="center"><div class="footer-logo left navitaire"></div></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-payments">
-					<ul class="list-inline">
-						<li class="footer-logo payments vi" title="VISA"></li>
-						<li class="footer-logo payments mc" title="Mastercard"></li>
-						<li class="footer-logo payments ax" title="American Express"></li>
-						<li class="footer-logo payments aj" title="JCB"></li>
-						<li class="footer-logo payments tp" title="UATP"></li>
-						<li class="footer-logo payments mc-secured" title="Mastercard Sercure Code"></li>
-						<li class="footer-logo payments pp" title="PayPal"></li>
-						<li class="footer-logo payments gg" title="GetGo"></li>
-						<li class="footer-logo payments ba" title="Alipay"></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-row row cf">
-				<div class="col-xs-6">
-					<ul class="list-inline">
-						<li class="nav-footer"><a href="https://www.cebupacificair.com/pages/privacy-policy" target="_blank">Privacy Policy</a></li>
-						<li class="nav-footer"><a href="https://www.cebupacificair.com/pages/website-terms-of-use" target="_blank">Terms of Use</a></li>
-						<li class="nav-footer"><a href="https://www.cebupacificair.com/pages/security" target="_blank">Security</a></li>
-						<li class="nav-footer"><a href="https://www.cebupacificair.com/pages/site-map" target="_blank">Site Map</a></li>
-					</ul>
-				</div>
-
-				<div class="col-xs-6 col-copyright">
-					<p>
-						<span>&#169; 2016 Cebu Pacific </span>
-						<span class="version">v911</span>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<!--end: footer -->
-
-
-
-
-<div id="sessionWarningContainer">
-	<div id="dimmer" style="display: block; position: fixed;">
-	</div>
-	<div id="sessionNoticeBox" role="alertdialog" tabindex="-1" aria-labelledby="sessionNoticeTitle" aria-describedby="sessionNoticeText sessionNoticeCount sessionNoticeTextBold">
-        <span class="session-bottom" role="status" aria-live="polite" aria-atomic="true">
-            <span id="sessionNoticeText">Your session on this page will expire in</span>
-            <span id="sessionNoticeCount"></span>
-            <span id="sessionNoticeTextBold">seconds</span>
-            <br />
-            <span id="sessionNoticeSubtext"><br />Do you need more time?</span>
-        </span>
-		<input id="sessionNoticeOK" type="button" value="YES" class="btn btn-blue btn-alt" />
-	</div>
+        </h1>
+        <div class="m-nav">
+            <ul class="J-nav">
+                <li class="slide" data-nav-type="0">
+                    <a href="javascript:;">机票<i></i><span class="i-arr-1"></span><span class="i-arr-2"></span></a>
+                </li>
+                <li class="slide" data-nav-type="1"><a href="javascript:;">旅游<i></i><span class="i-arr-1"></span><span class="i-arr-2"></span></a></li>
+                <li style="position: relative;"><a href="https://hotel.ch.com/default/BookingPage" target="_blank">酒店</a></li>
+                <li style="position: relative;"><a href="https://account.ch.com/CN/MemberRights/NewIndex" target="_blank">会员</a></li>
+                <li><a target="_blank" href="http://pages.ch.com/second-kill">限时抢购</a></li>
+                <li class="slide" data-nav-type="5"><a href="javascript:;" class="">服务中心<i></i><span class="i-arr-1"></span><span class="i-arr-2"></span></a></li>
+                <li class="slide" data-nav-type="6"><a href="javascript:;" class="noHref">差旅/团队<i></i><span class="i-arr-1"></span><span class="i-arr-2"></span></a></li>
+                <li class="slide" data-nav-type="7"><a href="http://money.ch.com">金融<i></i><span class="i-arr-1"></span><span class="i-arr-2"></span></a></li>
+
+            </ul>
+            <div class="sub-nav" m-nav-index="0" style="display: none;">
+                <div class="g-wp">
+                    <ul class="f-cb">
+                        <li><a href="https://flights.ch.com" target="_blank"><i class="i-1"></i>机票</a></li>
+                        <li><a href="http://pages.ch.com/Activitiesall/Activities372" target="_blank"><i class="i-2"></i>机+酒</a></li>
+                        <li><a href="https://flights.ch.com/baggage-rule" target="_blank"><i class="i-3"></i>行李</a></li>
+                        <li><a href="https://flights.ch.com/choose-seat" target="_blank"><i class="i-4"></i>选座</a></li>
+                        <li><a href="https://flights.ch.com/online-meals" target="_blank"><i class="i-5"></i>餐食</a></li>
+                        <li><a href="https://flights.ch.com/insurance" target="_blank"><i class="i-6"></i>保险</a></li>
+                        <li><a href="https://flights.ch.com/increase/viproom" target="_blank"><i class="i-8"></i>贵宾室</a></li>
+
+                        <li><a href="http://trip.ch.com/menpiao" target="_blank"><i class="i-11"></i>当地游玩</a></li>
+                        <li><a href="https://flights.ch.com/Static/ActivitiesAT" target="_blank"><i class="i-12"></i>境外WIFI</a></li>
+                        <li><a href="https://www.ch.com/mdsp" target="_blank"><i class="iconfont"></i>军(警/消防)残旅客购票</a></li>
+                        <li><a href="http://trip.ch.com/visa" target="_blank"><i class="iconfont"></i>签证</a></li>
+                        <li><a href="https://www.ch.com/mall/" target="_blank"><i class="iconfont" style="font-size:33px;"></i>绿翼商城</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav" m-nav-index="1" style="display: none;">
+                <div class="g-wp">
+                    <ul class="f-cb tour">
+                        <li><a href="http://trip.ch.com" target="_blank"><i class="i-1"></i>旅游</a></li>
+                        <li><a href="http://trip.ch.com/guonei" target="_blank"><i class="i-2"></i>国内游</a></li>
+                        <li><a href="http://trip.ch.com/dujia" target="_blank"><i class="i-3"></i>出境游</a></li>
+                        <li><a href="http://trip.ch.com/ziyouxing" target="_blank"><i class="i-4"></i>自由行</a></li>
+                        <li><a href="http://trip.ch.com/zhoubianyou" target="_blank"><i class="i-5"></i>周边游</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav" m-nav-index="5" style="display: none;">
+                <div class="g-wp">
+                    <ul class="f-cb">
+                        <li><a href="https://help.ch.com/Index" target="_blank" rel="nofollow"><i class="iconfont"></i>服务中心</a></li>
+                        <li><a href="https://help.ch.com/Service/CallCenter" target="_blank" rel="nofollow"><i class="iconfont"></i>在线咨询</a></li>
+
+                        <li><a href="https://help.ch.com/EInvoice/EInvoicePlatform" target="_blank"><i class="iconfont"></i>电子发票</a></li>
+                        <li><a href="https://flights.ch.com/show-check-ticket" target="_blank"><i class="iconfont"></i>客票验真</a></li>
+                        <li><a href="https://flights.ch.com/insurance" target="_blank"><i class="iconfont"></i>保险验真</a></li>
+                        <li class="luggageMobile" onclick="showLost(1)"><a href="javascript:void(0)"><i class="iconfont"></i>物品/行李遗失</a></li>
+                        <li class="luggageMobile" onclick="showLost(2)" style="display:none"><a href="javascript:void(0)"><i class="iconfont"></i>行李申诉及查询</a></li>
+                        <li><a href="https://help.ch.com/Services/AbnormalFlightCertificate" target="_blank"><i class="iconfont"></i>延误取消证明</a></li>
+                        <li><a href="https://flights.ch.com/Service/RefundTicket" target="_blank"><i class="iconfont"></i>不正常航班退改</a></li>
+                        <li><a href="https://help.ch.com/Complaints-Suggestions" target="_blank" rel="nofollow"><i class="iconfont"></i>投诉建议</a></li>
+                        <li><a href="https://help.ch.com/Services/TravelList" target="_blank" rel="nofollow"><i class="iconfont"></i>机票行程确认单</a></li>
+                        <li><a href="https://account.ch.com/order/flights?t_id=3&amp;m_id=1" target="_blank" rel="nofollow"><i class="iconfont"></i>网上值机</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav" m-nav-index="6" style="display: none;">
+                <div class="g-wp">
+                    <ul class="f-cb">
+                        <li><a href="https://www.ch.com/b2g" target="_blank"><i class="i-10"></i>企业差旅</a></li>
+                        <li><a href="http://pages.ch.com/act/zhengfucaigou" target="_blank"><i class="i-13"></i>公务员通道</a></li>
+                        <li><a href="http://pages.ch.com/Activitiesall/Activities436" target="_blank"><i class="i-14"></i>企业团队</a></li>
+                        <li><a href="http://pages.ch.com/Activitiesall/Activities466" target="_blank"><i class="i-15"></i>企业差旅APP</a></li>
+                        <li><a href="https://b2b.ch.com" target="_blank"><i class="iconfont"></i>同业团队</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav" m-nav-index="7" style="display: none;">
+                <div class="g-wp">
+                    <ul class="f-cb">
+                        <li><a href="https://money.ch.com/aboutUs/life" target="_blank"><i class="iconfont"></i>生活服务</a></li>
+                        <li><a href="https://money.ch.com/finance/pros" target="_blank"><i class="iconfont"></i>金融服务</a></li>
+                        <li><a href="https://money.ch.com/card/index" target="_blank"><i class="iconfont"></i>商旅通卡券</a></li>
+
+                        <li><a href="http://money.ch.com/public/bank_card" target="_blank"><i class="iconfont"></i>春秋联名卡</a></li>
+                        <li><a href="http://ch.forex.ctrip.com" target="_blank" rel="nofollow"><i class="iconfont"></i>外币兑换</a></li>
+                        <li><a href="https://money.ch.com/coupon/bhh" target="_blank" rel="nofollow"><i class="iconfont"></i>春秋白花花</a></li>
+                        <li><a href="https://money.ch.com/coupon/yqy" target="_blank" rel="nofollow"><i class="iconfont"></i>有钱游</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m-bar">
+            <!--登录后与用户相关信息-->
+
+            <div class="user J-user" islog="1"><i class="iconfont" style="color:grey;"></i><div class="app-tooltip" style="position: absolute; width: 100px; background: white; box-shadow: rgb(170, 170, 170) 0px 0px 8px; padding: 15px 20px; text-align: center; top: 30px; left: 0px; display: none;"><p><strong>下载客户端</strong></p><p><strong>更方便！更优惠！</strong></p><img src="//media.springairlines.com/cache/style/site5/img/qrcode/qrcodeType9.png" alt="" width="82" height="82" style="margin-top:10px;"></div>
+                <i class="i-user"></i>
+                <!--用户姓名-->
+                <span class="name" style="cursor: pointer;">18451017554</span>
+                <!--购物车内容数量-->
+                <div class="menu" style="display: none; min-height: initial; background: rgb(255, 255, 255);"><p class="name">18451017554</p><ul><li><a href="https://account.ch.com/order/flights?t_id=3&amp;m_id=1/" target="_blank"><i class="i-2"></i>我的订单（待付款 <strong>0</strong>）</a></li><li><a href="https://account.ch.com/CN/MemberRights/NewIndex " target="_blank"><i class="i-7"></i>我的会员权益</a></li><li><a href="https://account.ch.com/springPass-management" target="_blank"><i class="i-3"></i>积分管理</a></li><li><a href="https://account.ch.com/memberinfomanagement" target="_blank"><i class="i-4"></i>账户设置</a></li><li><a href="javascript:void(0)" class="elec-boarding"><i class="i-8"></i>我的电子登机牌</a></li></ul><div class="bd"><i class="i-non"></i><a class="J-logout">退出登录</a></div></div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<div class="p-wrap f-cb">
+
+    <script src="/Content/Js/jquery.qrcode1.min.js"></script>
+    <script src="/Content/Js/jquery.qrcode2.min.js"></script>
+    <div class="p-wrap">
+        <div class="p-holder">
+            <div class="p-flow-menu f-cb J-menu">
+
+
+                <ul class="c-buttons f-cb">
+
+                </ul>
+            </div>
+
+            <div class="p-content">
+                <div class="p-order">
+                    <div class="m-title f-cb">
+                        <i></i><span>机票订单详情</span>
+                    </div>
+                    <!--添加日本旅游需求二维码展示部分 2020.1.6-->
+                    <div class="add-erweima clearfix">
+                        <table class="m-order c-table c-table-new" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                            <tbody><tr class="th">
+                                <th colspan="2">基本信息</th>
+                            </tr>
+                            <tr>
+                                <td class="name">订单号</td>
+                                <td>VXOSTS</td>
+                            </tr>
+                            <!--华涛 2018-11-13 已支付且有积分支付的情况下，把积分扣减的金额也展示出来 黄智英 231720: 绿翼会员积分使用订单列表的显示需求PC-->
+                            <tr>
+                                <td class="name">订单金额</td>
+                                <td>
+                                    ¥149
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">下单时间</td>
+                                <td>2020-07-08 16:17:03</td>
+                            </tr>
+                            <tr class="last">
+                                <td class="name">订单状态</td>
+                                <td class="status" data-status="已取消">已取消</td>
+                            </tr>
+                            </tbody></table>
+                    </div>
+
+
+                    <table class="m-route c-table" cellpadding="0" cellspacing="0" border="0">
+                        <tbody><tr class="th">
+                            <th colspan="2">行程</th>
+                        </tr>
+
+                        <tr class="last">
+                            <td class="name">
+                                机票
+                                9C8871                                </td>
+                            <td>
+                                <ul class="list c-route">
+                                    <li>
+                                        <!--如果机场名称包含城市，则不展示城市-->
+                                        <p>预计出发： 2020-07-15 08:20   上海   浦东国际机场T2</p>
+                                    </li>
+                                    <li>
+                                        <p>预计到达：2020-07-15 09:25  淮安    涟水机场</p>
+
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        </tbody></table>
+                    <table class="m-service c-table" cellpadding="0" cellspacing="0" border="0">
+                        <tbody><tr class="th">
+                            <th colspan="2">预订的产品/服务</th>
+
+                        </tr>
+
+                        <tr>
+                            <td class="name">
+
+                                9C8871                            </td>
+                            <td>
+                                <!-- 改页面-->
+                                <h6>乘机人：*志强 </h6>
+                                <div class="c-service">
+                                    <ul class="c-service-ul">
+
+                                        <li data-prodetailid="">
+                                            <div class="item" nowrap="">
+                                                                <span class="c-name">
+                                                                    会员专享座成人票<span style="font-weight:normal;color:#f90;">(P1舱)</span>: 7KG手提行李,限1件,尺寸20*30*40(CM)内，无免费托运行李额
+                                                                </span>
+                                                <span class="c-price">/¥99  </span>
+
+                                            </div>
+                                        </li>
+                                        <li> <span style="font-weight:normal;color:#FAA701;">(已取消)</span></li>
+                                        <li><span>&nbsp;,&nbsp;</span></li>
+                                        <li data-prodetailid="">
+                                            <div class="item" nowrap="">
+                                                                <span class="c-name">
+                                                                    机建费
+                                                                </span>
+                                                <span class="c-price">/¥50  </span>
+
+                                            </div>
+                                        </li>
+                                        <li><span>&nbsp;,&nbsp;</span></li>
+                                        <li data-prodetailid="">
+                                            <div class="item" nowrap="">
+                                                                <span class="c-name">
+                                                                    燃油费
+                                                                </span>
+                                                <span class="c-price">/¥0  </span>
+
+                                            </div>
+                                        </li>
+                                        <li><span>&nbsp;,&nbsp;</span></li>
+                                        <li data-prodetailid="">
+                                            <div class="item" nowrap="">
+                                                                <span class="c-name">
+                                                                    其他税费
+                                                                </span>
+                                                <span class="c-price">/¥0  </span>
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div style="clear:both"></div>
+
+                            </td>
+                        </tr>
+
+
+
+                        </tbody></table>
+                </div>
+                <div class="p-passenger">
+                    <div class="m-title f-cb">
+                        <i></i><span>乘机人信息</span>
+                        <span class="check-user-info-btn" style="display:none;float:right;color:#40a0ff;font-size: 14px;cursor:pointer">想要查看完整信息？需验证联系人手机</span>
+                    </div>
+                    <ul class="list f-cb">
+                        <li class="">
+                            <table class=" item" cellpadding="0" cellspacing="0" border="0">
+                                <tbody><tr>
+                                    <td class="name f-cb">
+                                        <i></i>
+                                        <p>*志强 </p>
+                                        <p class="c-ps">(成人)</p>
+                                    </td>
+                                    <td class="info">
+                                        <p>出生年月：1992-08-01</p>
+                                        <div class="show_Tips pMobile" data-phone="184******54">
+                                            <p>联系电话：<span class="hide-mobile">184******54</span></p>
+                                            <div class="u-btip" style="margin-left: 70px; width: 180px; text-align: left; color: rgb(68, 68, 68); display: none;">
+                                                <div class="u-btip-inner">
+                                                    <p class="J-value" data-isvalue="0">zyR26/5nnPq1tunZe+1/UA==</p>
+                                                </div>
+                                                <div class="u-btip-arrow u-btip-bottom"><i></i></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="show_Tips certificateTypeV">
+                                            <p>
+                                                证件类型：<span class="certificate hide-certificate" data-value="51072*********3414">51072*********3414</span><span class="hide-certificate-type">(身份证)</span>                                                             </p>
+                                            <div class="u-btip" style="margin-left: 70px; width: 180px; text-align: left; color: rgb(68, 68, 68); display: none;">
+                                                <div class="u-btip-inner">
+                                                    <p class="J-value" data-isvalue="0">PYmBG1IGp0apNo/xmppREVsk3v0MFYPqzatjfslYqUI=</p>
+                                                </div>
+                                                <div class="u-btip-arrow u-btip-bottom"><i></i></div>
+                                            </div>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                </tbody></table>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="p-passenger">
+                    <div class="m-title f-cb">
+                        <i></i><span>联系人信息</span>
+                    </div>
+                    <ul class="list f-cb">
+                        <li>
+                            <table class="item" cellpadding="0" cellspacing="0" border="0">
+                                <tbody><tr>
+                                    <td class="name f-cb">
+                                        <i></i>
+                                        <p>叶志强</p>
+                                    </td>
+                                    <td class="info">
+                                        <div class="show_Tips">
+                                            <p>联系电话：<span class="show_Moblie" id="concactPerson" data-phone="ixObX+0Y1GsTwXO1RXP1eQ==">184*****554</span></p>
+                                            <div class="u-btip" style="margin-left: 70px; width: 180px; text-align: left; color: rgb(68, 68, 68); display: none;">
+                                                <div class="u-btip-inner">
+                                                    <p class="J-value" data-isvalue="0">ixObX+0Y1GsTwXO1RXP1eQ==</p>
+                                                </div>
+                                                <div class="u-btip-arrow u-btip-bottom"><i></i></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody></table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-tip">
+                    <div class="m-title f-cb">
+                        <i></i><span>订票提示</span>
+                    </div>
+                    <ul class="list">
+                        <li>
+                            <p class="title">如何确认机票订购成功</p>
+                            <ul class="tip">
+                                <li>1．点击"订单"，根据"订单时间"选择相应的"编号"，点击订单号查看订单详细内容。如果订票状态是"已支付"，那说明您已经订票成功。</li>
+                                <li>2．支付成功后，会有一条确认短信发到您的注册手机上，如果您收到该短信，证明您已经支付成功；如果没有收到，请进入"订单"，自助查询订单号。</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="title">如何取机票？如何登机？</p>
+                            <ul class="tip">
+                                <li>
+                                    1．春秋航空实行电子客票，您网上购票成功后，只要凭有效身份证件和订单号(6个大写英文字母)，航班起飞前120分钟，出港机场春秋航空柜台取票，办理值机即可。如不需要报销，可以凭有效身份证件和(6个大写英文字母)订单号直接办理登机，无需换取纸质机票。儿童票也可同样操作。
+                                </li>
+                                <li>
+                                    2．支付成功后，会有一条确认短信发到您的注册手机上，如果您收到该短信，证明您已经支付成功；如果没有收到，请进入"订单"，自助查询订单号。
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <input type="hidden" id="destinationCode" value="HIA">
+            <div id="travel-content-1" class="m-row travel-content"><div class="gd-wp gd-4 f-cb"><ul class="travel-data"></ul></div></div>
+        </div>
+
+        <div class="wl_info" style="left: 601.5px;">
+            <div class="wl_info_title">
+                <ul style="float:left;width:100%;margin-bottom:10px;">
+                    <li style="float:left;width:20%;margin-left:30px;"><img width="103" src="//media.springairlines.com/cache/style/site5/Img/member/as.png"></li>
+                    <li class="wl_info_NO"></li>
+                </ul>
+            </div>
+
+            <div class="have_wl_info">
+                <div class="wl_flag"></div>
+                <div class="wl_content"></div>
+            </div>
+
+            <div class="no_wl_info">
+                <div class="no_wl_info_title">您的行程单还没寄出,请耐心等待</div>
+            </div>
+            <div style="clear:both;"></div>
+            <a href="javascript:void(0)"><div class="close_wl_info">关 闭</div></a>
+        </div>
+
+
+        <div class="wl_mask"></div>
+    </div>
+
+    <!--动态生成二维码凭证-->
+    <script>
+        $(function () {
+            var tds = document.getElementsByName("qrcode");
+            if (tds && tds.length > 0) {
+                for (var i = 0; i < tds.length; i++) {
+                    $(tds[i]).qrcode({
+                        render: "canvas",//也可以替换为table
+                        width: 100,
+                        height: 100,
+                        text: utf16to8($(tds[i]).attr("rid"))
+                    });
+                }
+            }
+            //订单详情table的宽度动态控制 2020.03.16
+            var isErweimaDom = $(".goTo-JP-erweima");
+            if (isErweimaDom.length == 1) {
+                //配置得有旅行目的地二维码
+                $(".c-table.c-table-new").css("width", "70%");
+            } else {
+                $(".c-table.c-table-new").css("width", "100%");
+            }
+        });
+
+        function utf16to8(str) {
+            var out, i, len, c;
+            out = "";
+            len = str.length;
+            for (i = 0; i < len; i++) {
+                c = str.charCodeAt(i);
+                if ((c >= 0x0001) && (c <= 0x007F)) {
+                    out += str.charAt(i);
+                } else if (c > 0x07FF) {
+                    out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                    out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                    out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                } else {
+                    out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                    out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                }
+            }
+            return out;
+        }
+    </script>
 
 
 
 
-<script src="/js/ceb?v=STyGap5T4xaOiTCOG7YEaxSa6D8ycQHWDCXdG-mzlrc1"></script>
+</div>
 
-<script src="/js/app?v=74LEXaZZUeNeYW1W4zIxwGFMCd_2ZWAVISEMVwwZBCY1"></script>
+<div class="g-footer" style="display:block;">
+    <div class="links">
+        <a href="https://www.ch.com/Static/AboutUs" target="_blank" rel="nofollow">关于春秋</a>
+        <span>丨</span>
+        <a href="https://flights.ch.com/business-place" target="_blank" rel="nofollow">联系我们</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/invester/" target="_blank" rel="nofollow">投资者关系</a>
+        <span>丨</span>
+        <a href="http://job.ch.com" target="_blank" rel="nofollow">诚聘英才</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/sitemap.html" target="_blank">网站地图</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/links.html" target="_blank">友情链接</a>
+        <span>丨</span>
+        <a href="http://www.springtour.com/" target="_blank">春秋旅游</a>
+        <span>丨</span>
+        <a href="http://money.ch.com" target="_blank" rel="nofollow">春秋商旅通</a>
+        <span>丨</span>
+        <a href="http://Ask.ch.com/tourcom/login" target="_blank" rel="nofollow">春秋内部社区</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/privacy-regulation" target="_blank" rel="nofollow">关于网站的隐私权规则</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/law/" target="_blank" rel="nofollow">春秋法律声明</a>
+        <span>丨</span>
+        <a href="https://www.ch.com/Static/Company/" target="_blank" rel="nofollow">营业执照</a>
+    </div>
+    <p style="color: #939393; margin-top: 10px; border-top: 1px solid #f0f0f0; padding: 10px 0;">
+        Copyright ©1998-2020 版权所有 CH.COM 春秋航空服务及投诉热线 95524 投诉受理电子邮件：cs@ch.com 春秋集团总机 021-62520000      春秋集团服务监督电话 021-62515444
+    </p>
+    <div style="width:300px;margin:0 auto; padding-bottom:15px;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502000060" rel="nofollow" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="//media.springairlines.com/style/site5/img/copyright.png" style="float:left;">
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">沪公网安备 31010502000060号</p>
+        </a>
+    </div>
+    <div class="sale">
+        <div class="f-cb">
+            <a href="https://flights.ch.com/SHA-SZX.html" target="_blank">上海到深圳特价机票</a>
+            <a href="https://flights.ch.com/SHA-CAN.html" target="_blank">上海到广州特价机票</a>
+            <a href="https://flights.ch.com/SHA-CKG.html" target="_blank">上海到重庆特价机票</a>
+            <a href="https://flights.ch.com/SHA-CTU.html" target="_blank">上海到成都特价机票</a>
+            <a href="https://flights.ch.com/SHA-SWA.html" target="_blank">上海到汕头特价机票</a>
+            <a href="https://flights.ch.com/SHA-SIA.html" target="_blank">上海到西安特价机票</a>
+            <a href="https://flights.ch.com/SHA-XMN.html" target="_blank">上海到厦门特价机票</a>
+            <a href="https://flights.ch.com/SHE-HGH.html" target="_blank">沈阳到杭州特价机票</a>
+            <a href="https://flights.ch.com/SHA-DLC.html" target="_blank">上海到大连特价机票</a>
+            <a href="https://flights.ch.com/SHA-KMG.html" target="_blank">上海到昆明特价机票</a>
+            <a href="https://flights.ch.com/SHA-CSX.html" target="_blank">上海到长沙特价机票</a>
+            <a href="https://flights.ch.com/SHA-ZUH.html" target="_blank">上海到珠海特价机票</a>
+            <a href="https://flights.ch.com/SHA-SHE.html" target="_blank">上海到沈阳特价机票</a>
+            <a href="https://flights.ch.com/SHA-CGQ.html" target="_blank">上海到长春特价机票</a>
+            <a href="https://flights.ch.com/SHA-KHH.html" target="_blank">上海到高雄特价机票</a>
+            <a href="https://flights.ch.com/SHA-TPE.html" target="_blank">上海到台北特价机票</a>
+            <a href="https://flights.ch.com/SHA-BKK.html" target="_blank">上海到曼谷特价机票</a>
+            <a href="https://flights.ch.com/SHA-HKG.html" target="_blank">上海到香港特价机票</a>
+            <a href="https://flights.ch.com/SZX-HRB.html" target="_blank">深圳到哈尔滨特价机票</a>
+            <a href="https://flights.ch.com/SHA-OSA.html" target="_blank">上海到大阪特价机票</a>
+            <a href="https://flights.ch.com/SHA-TYO.html" target="_blank">上海到茨城特价机票</a>
+        </div>
+    </div>
+    <div>
+        <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=*.ch.com&amp;lang=zh_CN" rel="nofollow" target="_blank">
+            <img src="//media.springairlines.com/style/site5/img/versign.png" width="108" height="50">
+        </a>
+        <a href="https://www.atsec.cn/cn/pci-attestation/SpringAirlines-PCIAttestation-atsec-PCI-DSS-C-01440.pdf" rel="nofollow" target="_blank">
+            <img src="//media.springairlines.com/cache/style/site/img/i-pcidss.png" width="83" height="50">
+        </a>
 
-<script src="/js/lib?v=M9qJALsquNmHEca-YxCaJtpTimYhkLckUCkXvWnKw9c1"></script>
-
-<script src="/js/selectpicker?v=spuYODo8VAZQqV67I-PjpZSiweMzLCBgin9yERDjIww1"></script>
-
-<script src="/js/autocapitalization?v=9cqKVSCXoaTmq43dsadwdUKRiE_nGHaiw-Y3OWpUUts1"></script>
-
-<script src="/js/ui?v=qrXICfyJvWw-naIuXyWx27XRMneHipKkCdHoACWyclg1"></script>
-
-<script src="/js/validation?v=-Cwug1EFfTgxj_UUtDduMB0VRN8bsrHgTFXCpLOiVYY1"></script>
-
-<script src="/js/wcag?v=9J4ApNUplJ3huZwCmIQntRd3xGVvTSAZ6lQ5TxBtHns1"></script>
 
 
+        <a href="https://kxlogo.knet.cn/verifyseal.dll?sn=e12031931010014878308178&amp;ct=df&amp;pa=250084" target="_blank" rel="nofollow">
+            <img src="//media.springairlines.com/cache/springairlines/images/b_credible.gif" width="128" height="50">
+        </a>
+        <a href="http://www.12377.cn" rel="nofollow" target="_blank">
+            <img src="//media.springairlines.com/cache/springairlines/images/b_110.gif">
+        </a>
+        <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110602181725415" rel="nofollow" target="_blank">
+            <img src="//media.springairlines.com/cache/springairlines/images/gs_icon.gif">
+        </a>
+        <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"><img src="//media.springairlines.com/cache/style/site5/img/170706沪ICP备新图标.jpg" width="142" height="50"></a>
+        <img src="//media.springairlines.com/cache/style/site5/img/lastLogo_mini.png" width="108" height="48" style="border: 1px solid #ccc;">
+    </div>
+</div>
+<script src="//ajax.springairlines.com/cache/js/sea-master5.js?vs=2020070311&amp;cdnurlarea="></script>
 
-<script type="text/javascript" src="/Scripts/lib/cultures/globalize.culture.en-PH.js"></script>
+<script type="text/javascript" src="https://static.geetest.com/static/tools/gt.js"></script>
+<script>
+    function _tip(slef) {
+        $(slef).next().show();
+    }
+    function _tipOut(slef) {
+        $(slef).next().hide();
+    }
 
-<script type="text/javascript">
-	Globalize.culture("en-PH");
+    function load_wl_info(json) {
+        var index = 0; //下标0开始算起
+        var htm = '<ul><li style="padding-left:50px;">';
+        var htm1 = '<ul style="width:97%;">';
+        var pointImg = '<img width="16" src="//media.springairlines.com/cache/style/site5/Img/member/point.png">';
+        var point2Img = '<img width="10" src="//media.springairlines.com/cache/style/site5/Img/member/point2.png" style="margin-left:3px;">';
+        var point3Img = '<img width="10" src="//media.springairlines.com/cache/style/site5/Img/member/point3.png" style="margin-left:3px;">';
+        var shortDivGreen = '<div style="height:32px;width:2px;border-left:solid 2px #00ab6f;margin-left:7px;margin-bottom:3px;"></div>';
+        var longDivGreen = '<div style="height:35px;width:2px;border-left:solid 2px #00ab6f;margin-left:7px;"></div>';
+        var shortDivHui = '<div style="height:32px;width:2px;border-left:solid 2px #dcdcdc;margin-left:7px;margin-bottom:3px;"></div>';
+        var longDivHui = '<div style="height:35px;width:2px;border-left:solid 2px #dcdcdc;margin-left:7px;"></div>';
+
+
+
+        var arr = json['traces'];
+        var len = arr.length - 1;
+        for (var i = 0; i < (len + 1); i++) {
+            //首先判断大圆圈是第一个的话
+            if (index == 0 && i == 0) {
+                htm += pointImg;
+                htm += longDivHui;
+                htm1 += '<li style="width:100%;border-bottom:solid 1px #e9e9e9;margin-bottom:10px;padding-bottom:7px;color:#00ab6f;">' +
+                    '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                    '<p>' + arr[i]['acceptTime'] + '</p>' +
+                    '</li>';
+            }
+            else if (index == len && i == len) {
+                htm += pointImg;
+                htm1 += '<li style="width:100%;margin-bottom:10px;padding-bottom:7px;color:#00ab6f;">' +
+                    '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                    '<p>' + arr[i]['acceptTime'] + '</p>' +
+                    '</li>';
+            }
+            else {
+                if (index == i) {
+                    htm += pointImg;
+                    htm += shortDivHui;
+
+                    htm1 += '<li style="width:100%;border-bottom:solid 1px #e9e9e9;margin-bottom:10px;padding-bottom:7px;color:#00ab6f;">' +
+                        '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                        '<p>' + arr[i]['acceptTime'] + '</p>' +
+                        '</li>';
+                }
+                else if (index > i) {
+                    if (index == (i + 1)) {
+                        if (i != json) {
+                            htm += point3Img;
+                            htm += shortDivGreen;
+                        }
+                    }
+                    else {
+                        if (i != len) {
+                            htm += point3Img;
+                            htm += longDivGreen;
+                        }
+                    }
+                    if (i == len) {
+                        htm1 += '<li style="width:100%;margin-bottom:10px;padding-bottom:7px;color:#00ab6f;">' +
+                            '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                            '<p>' + arr[i]['acceptTime'] + '</p>' +
+                            '</li>';
+                    }
+                    else {
+                        htm1 += '<li style="width:100%;border-bottom:solid 1px #e9e9e9;margin-bottom:10px;padding-bottom:7px;color:#00ab6f;">' +
+                            '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                            '<p>' + arr[i]['acceptTime'] + '</p>' +
+                            '</li>';
+                    }
+                }
+                else {
+                    if (index == (i - 1)) {
+                        if (i != len) {
+                            htm += point2Img;
+                            htm += shortDivHui;
+                        }
+                        else {
+                            htm += point2Img;
+                        }
+                    }
+                    else {
+                        if (i != len) {
+                            htm += point2Img;
+                            htm += longDivHui;
+                        }
+                        else {
+                            htm += point2Img;
+                        }
+                    }
+
+                    if (i == len) {
+                        htm1 += '<li style="width:100%;margin-bottom:10px;padding-bottom:6px;color:#999">' +
+                            '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                            '<p>' + arr[i]['acceptTime'] + '</p>' +
+                            '</li>';
+
+                    }
+                    else {
+                        htm1 += '<li style="width:100%;border-bottom:solid 1px #e9e9e9;margin-bottom:10px;padding-bottom:7px;color:#999">' +
+                            '<p style="width:99%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden">' + arr[i]['acceptAddress'] + ' ' + arr[i]['remark'] + '</p>' +
+                            '<p>' + arr[i]['acceptTime'] + '</p>' +
+                            '</li>';
+
+                    }
+                }
+            }
+        }
+        htm += '</li></ul>';
+        htm1 += '</ul>';
+        $('.wl_flag').append(htm);
+        $('.wl_content').append(htm1);
+    }
+    seajs.use(['jquery', 'ui-dialog5', 'plugin5/ui-suspension'], function ($) {
+        var json = null;
+        var emsno = $('.cms_list').attr('data-expressageno')
+        var width = $(window).width();
+        width = (width - 700) / 2;
+        $('.wl_info').css('left', width);
+        $('.cms_list').click(function () {
+            $(".wl_flag").children().remove();
+            $(".wl_content").children().remove();
+            $('.wl_mask').show();
+            $('.wl_info').show();
+            if (emsno == '0') {
+                $('.wl_info_NO').html('');
+                var width = $(window).width();
+                width = (width - 700) / 2;
+                $('.wl_info').css('left', width);
+                $('.no_wl_info').css('height', 100);
+
+                $('.have_wl_info').hide();
+                $('.no_wl_info').show();
+            }
+            else {
+                $('.wl_info_NO').html('运单号 : ' + emsno);
+
+                $.ajax({
+                    url: '/order/GetExpressageData',
+                    type: 'post',
+                    data: {
+                        expressageNo: emsno
+                    },
+                    success: function (res) {
+                        json = JSON.parse(res.Result);
+                        if (json['traces'].length > 0) {
+                            $('.wl_mask').show();
+                            $('.have_wl_info').show();
+                            $('.no_wl_info').hide();
+                            load_wl_info(json);
+                        }
+                        else {
+                            var width = $(window).width();
+                            width = (width - 700) / 2;
+                            $('.wl_info').css('left', width);
+                            $('.no_wl_info').css('height', 100);
+                            $('.have_wl_info').hide();
+                            $('.no_wl_info').show();
+                        }
+                    },
+                    error: function (e) {
+
+                    }
+                });
+            }
+
+            var scrollTop = $(document).scrollTop() + 180;
+            $('.wl_info').css('top', scrollTop);
+        });
+
+        $('.close_wl_info').click(function () {
+            $('.wl_mask').hide();
+            $('.wl_info').hide();
+        });
+
+
+        function _alert1(Text, Url) {
+            $.dialog({
+                content: Text,
+                buttons: {
+                    '确认': function () {
+                        if (Url) {
+                            location.href = Url;
+                        }
+                        return false;
+                    }
+                }
+            });
+        }
+        $('.J-drop').hover(
+            function () {
+                $(this).find('.c-drop-list').show();
+                $(this).find('.icon').css({
+                    'transform': 'rotate(180deg)'
+                })
+            }, function () {
+                $(this).find('.c-drop-list').hide();
+                $(this).find('.icon').css({
+                    'transform': 'none'
+                })
+            });
+        var slideMenu = function () {
+            var $this = $('.p-flow-menu'), target = $('.p-content').offset().top, _top = $this.offset().top;
+            /** $(window).scroll(function () {
+                         var top = $(document).scrollTop();
+                         if (top >= _top) {
+                             $this.addClass('p-shadow');
+                             $this.css({
+                                 'position': 'fixed',
+                                 'top': '0',
+                                 'width': '1200px'
+                             });
+                         }
+                         else if (top <= target) {
+                             $this.removeClass('p-shadow');
+                             $this.css({
+                                 'position': 'relative'
+                             });
+                         }
+                     })**/
+        }
+        slideMenu();
+
+        //$('.show_Tips').suspension1();
+
+
+        var _alertBg = function (od) {
+            $.dialog({
+                content: "是否确认取消变更的航班?",
+                buttons: {
+                    '确认': function () {
+                        $.post('/Order/CancelFlightBg', { 'id': od }, function (json) {
+                            if (json.Code == '0') {
+                                _alert1('操作成功', location.href);
+                                return true;
+
+                            } else {
+                                _alert1(json.Code);
+                                return true;
+                            }
+                        });
+                        return true;
+                    },
+                    '取消': function () {
+                        return false;
+                    }
+                }
+            });
+        }
+
+        //cancel flight changing
+        $('.btn-cancelcf').click(function () {
+            var od = $(this).attr('od');
+            if (od) {
+                _alertBg(od);
+            }
+        });
+        //机票升级
+        $('.J-go-plus').click(function () {
+            $.dialog({
+                title: '提示',
+                content: '<div style="padding: 30px 0;text-align: center;"><p style="font-size: 14px;">升舱服务目前仅供APP用户专享，扫描下方二维码立即下载吧！</p><img src="//media.springairlines.com/style/site5/img/service/download-app.png" style="display: inline-block;width: 110px;height: 110px;margin-top: 20px;" /></div>',
+                buttons: null
+            });
+        });
+        var _alertCH = function (od) {
+            $.dialog({
+                content: "是否确认取消在线值机?",
+                buttons: {
+                    '确认': function () {
+                        $.post('/Order/CancelCheckInOnLine', { 'id': od }, function (json) {
+                            if (json.Code == '0') {
+                                _alert1('操作成功', location.href);
+                                return true;
+
+                            } else {
+                                _alert1(json.Code);
+                                return true;
+                            }
+                        });
+                        return true;
+                    },
+                    '取消': function () {
+                        return false;
+                    }
+                }
+            });
+        }
+        //取消在线值机
+        $('.btn-cancelcheckIn').click(function () {
+            var od = $(this).attr('od');
+            if (od) {
+                _alertCH(od);
+            }
+        });
+
+    })
+
+    //快速安检
+    seajs.use(['jquery', 'ui-overlay'], function ($) {
+        $('.security-check-erweima').each(function () {
+            $(this).overlay({ autoOpen: false })
+        });
+        $('.erweima-bomb').on('click', function () {
+            var classNameNum = $(this).attr('class').split('erweima-bomb')[2];
+            $($('.security-check-erweima')[classNameNum - 1]).overlay().open();
+        })
+        $('.address-pic').click(function () {
+            var classImgNum = $(this).attr('class').split('address-pic')[2];
+            if (!$($('.address-img')[classImgNum - 1]).hasClass('address-none')) {
+                $($('.address-img')[classImgNum - 1]).addClass('address-none');
+                $($('.address-img')[classImgNum - 1]).find('img').show();
+            } else {
+                $($('.address-img')[classImgNum - 1]).removeClass('address-none');
+                $($('.address-img')[classImgNum - 1]).find('img').hide();
+            }
+        })
+    });
+
+    /// 猜你喜欢
+    seajs.use(['plugin5/ui-travel-city-list'], function (TravelCityList) {
+        var travel1 = new TravelCityList({
+            CityElement: "#travel-content-1",
+            citySearchId: 'destinationCode',
+            cityUrl: '/order/GetGuessYouLikeProducts'
+        });
+        travel1.getLocationCities($("#destinationCode").val(), "Orderdetail");
+    });
+
+    seajs.use(['orderdetails']);
 </script>
-
-<script type="text/javascript">
-	Globalize.culture().numberFormat.currency.symbol = "";
-	Globalize.culture().numberFormat.currency.decimals = 2;
-</script>
-
-
-
-<script type="text/javascript" async="" src="https://api-ap-southeast-2-production.boxever.com/v1.2/boxever-min.js?client_key=cap9kylkxexvqbwfljqctlwjpvukqvde"></script>
-
-
-
-<script src="/js/gaeventtracking?v=0JgBgnj8nUQzPTAZJbgc2QBDyAmQl9oP5u7LINkWCzw1"></script>
-
-
-
-
-
-
-<script src="/js/managebooking?v=kFvcSRl9gdTO8THkjxQFJb_oIWHwlSuyGA60kxtYF-k1"></script>
 
 <script>
-	$(function () {
-		$(".square-radio").iCheck({
-			radioClass: 'iradio_minimal-blue',
-			increaseArea: '20%' // optional
-		});
-
-		$(".square-checkbox").iCheck({
-			checkboxClass: 'icheckbox_minimal-blue'
-		});
-	});
+    seajs.use(['jquery', 'app5/fn-head'], function ($, _head) {
+        //(function () {
+        //    var opts = {
+        //        content: '.list',
+        //        nav: '.nav-ly',
+        //        item: '.list li',
+        //        size: 4,
+        //        delay: 1000
+        //    }
+        //    var width = $(opts.item).outerWidth(true) * opts.size;
+        //    var length = $(opts.item).length / opts.size;
+        //    $(opts.content).width(width * length);
+        //    for (var i = 0; i < length; i++) {
+        //        $(opts.nav).append('<i data-index="' + i + '"></i>');
+        //    }
+        //    var navbtn = $(opts.nav).find('i');
+        //    $(opts.nav).width(navbtn.length * (navbtn.outerWidth(true) + 10));
+        //    $(opts.nav).find('i').eq(0).addClass('on');
+        //    $(opts.nav).find('i').bind('mouseenter', function () {
+        //        var index = $(this).index();
+        //        $(opts.content).stop().animate({ 'margin-left': -(index * width) });
+        //        $(this).addClass('on').siblings().removeClass('on');
+        //    })
+        //})()
+    });
 </script>
 
 
 
+<script src="//ajax.springairlines.com/js/api/springtrack.js?vs=2020061201"></script>
 
-
-<script type="text/javascript">
-	if (nca.createObject) { nca.createObject("multipleTabs", {"bookingKeyClass":"bookingKey"}); }if (nca.createObject) { nca.createObject("pageUnload", {"message":"You haven\u0027t finished your booking yet."}); }if (nca.createObject) { nca.createObject("pageWait", {"loadingDimmerId":"loadingDimmer","loadingImageId":"loadingImage"}); }if (nca.createObject) { nca.createObject("wcagFocus", {"outlineCssValue":"wcag-outline"}); }if (nca.createObject) { nca.createObject("loginDialog", {"arrowsClass":"arrowUp","dialogsClass":"headerDialog","hiGuestId":"hiGuestLink","loginArrowId":"signIn-login-arrow","loginDialogCloseId":"login-dialog-close","loginDialogId":"login-dialog","openDialogOnLoad":false,"signInId":"signInLink"}); }if (nca.createObject) { nca.createObject("breadcrumb", {"activeClass":".active","selectorClasses":".future,.readonly"}); }if (nca.createObject) { nca.createObject("resetChanges", {"actionUrl":"/Manage","breadcrumbsClass":"primary-nav","cancelChangesBtnClass":"cancelResetChangesBtn","modalElementId":"resetChangesConfirmationModal","pageSubmitBtnId":"pageSubmitBtnId","requiresReset":false,"resetChangesBtnClass":"confirmResetChangesBtn","url":"/Booking/ResetChanges"}); }if (nca.createObject) { nca.createObject("modal", {"appendToFooter":false,"bodyContentSelector":".modal-body-reset-changes-confirmation","footerContent":".modal-footer-reset-changes-confirmation","modalElementId":"resetChangesConfirmationModal","titleSelector":".modal-header-reset-changes-confirmation","triggerElementName":"reset-changes-btn"}); }if (nca.createObject) { nca.createObject("sessionTracking", {"buttonConfirm":"OK","buttonContinue":"YES","channel":"WEB","clientKey":"cap9kylkxexvqbwfljqctlwjpvukqvde","countdownText":"seconds","currency":"PHP","expiredSubtext":"Please try again.","expiredText":"Your session has expired.","language":"EN","message":"Your session on this page will expire in","page":"MMB","pos":"cebu.ph","redirectUrl":"/Manage/Retrieve","sessionCountdown":"60","sessionRefreshUrl":"/Booking/SessionRefresh","timeBeforeExpire":"9","title":"WARNING"}); }if (nca.createObject) { nca.createObject("validationPopoverEventBus", {"title":"Field Incomplete"}); }if (nca.createObject) { nca.createObject("clearSurveyCookie", {}); }if (nca.createObject) { nca.createObject("menuBar", {"arrowUpSelector":".arrowUp","dialogsSelector":".headerDialog","headerButtonsSelector":".headerButton","isMenuBar":true,"loginBarSelector":".loginBar","menuBarSelector":".menuBar"}); }if (nca.createObject) { nca.createObject("toggleManageOptionMenu", {"addOnsPanelClass":"manage-booking-add-ons","continueBtnId":"submit_manage_button","hideContinueBtnClasses":["print-view-itinerary","settle-amount","manage-booking-pay","update-guest","pay-feetax"],"manageOptionRadioClass":"radio-click","manageOptionsClass":"manage-option","manageOptionsContainerClass":"manage-option-container","manageSelectContainerClass":"manage-option-select-container","showAddOnsPanelClass":"manage-booking-pay","showContinueBtn":true}); }if (nca.createObject) { nca.createObject("managePayOptions", {"addInfantId":"add-infant","addonsCheckboxesClass":"addons-checkbox","allCheckboxClass":"square-checkbox","cancelFlightId":"cancel-flight","changeFlightId":"change-flight","continueBtnId":"submit_manage_button","labelClass":"change-flight-label","manageCheckboxesContentClass":"manage-configure-details","managePayCheckboxClass":"manage-booking-checkbox","manageRefundButtonId":"tab-refund","manageRefundFieldId":"refund-value","payTerminalFeePHTravelTaxButtonId":"tab-payfeetax","payTerminalFeePHTravelTaxFieldId":"payfeetax-value","radioButtonName":"manageoptions","updateGuestDetailsButtonId":"tab-updateguest","updateGuestDetailsFieldId":"update-guest-details-value","warningModalClass":"warningModalClass"}); }if (nca.createObject) { nca.createObject("checkbox", {}); }if (nca.createObject) { nca.createObject("localTime", {}); }if (nca.createObject) { nca.createObject("wcagModal", {"modalElementId":"payNowModal","triggerElementName":"payNowButton"}); }if (nca.createObject) { nca.createObject("confirmationModalProceed", {"modalId":"payNowModal","proceedButtonId":"payNowConfirmationYes","url":"/Payment/New"}); }if (nca.createObject) { nca.createObject("wcagTabs", {"containerClass":".manage-container","mBOptionsClass":"manage-option"}); }
-	if (nca.createObject) { nca.createObject("Validation", {"forms":{"memberLoginForm":{"messages":{"cebMemberLogin.Username":{"required":"Please enter your email address.","email":"Email address is not in the correct format."},"cebMemberLogin.Password":{"required":"Please enter your password."}},"rules":{"cebMemberLogin.Username":{"required":true,"email":true},"cebMemberLogin.Password":{"required":true}}},"manageBookingForm":{"messages":{},"rules":{}}}}); }
+<script>
+    SA.trackSet({
+        p3: '机票订单详情_cn'
+    });
 </script>
 
+<script>
+</script>
+
+<script>
+</script>
+<script type="text/javascript" src="//media.springairlines.com/cache/js/modules/site5/guanaitong/gat-changeurl.js?vs=2019050805"></script>
 
 
-
-
-<script type="text/javascript" async="async" src="/__zenedge/assets/f.js?v=1582810313"></script></body>
-</html>
+<div id="u-loading-layer"><i></i></div><input name="lang-rel" type="hidden" value="0"><div class="geetest_panel geetest_wind" style="display: none;"><div class="geetest_panel_ghost"></div><div class="geetest_panel_box"><div class="geetest_other_offline geetest_panel_offline"></div><div class="geetest_panel_loading"><div class="geetest_panel_loading_icon"></div><div class="geetest_panel_loading_content">智能验证检测中</div></div><div class="geetest_panel_success"><div class="geetest_panel_success_box"><div class="geetest_panel_success_show"><div class="geetest_panel_success_pie"></div><div class="geetest_panel_success_filter"></div><div class="geetest_panel_success_mask"></div></div><div class="geetest_panel_success_correct"><div class="geetest_panel_success_icon"></div></div></div><div class="geetest_panel_success_title">通过验证</div></div><div class="geetest_panel_error"><div class="geetest_panel_error_icon"></div><div class="geetest_panel_error_title">网络超时</div><div class="geetest_panel_error_content">请点击此处重试</div><div class="geetest_panel_error_code"><div class="geetest_panel_error_code_text"></div></div></div><div class="geetest_panel_footer" style="display: none;"><div class="geetest_panel_footer_logo"></div><div class="geetest_panel_footer_copyright">由极验提供技术支持</div></div><div class="geetest_panel_next"></div></div></div></body></html>

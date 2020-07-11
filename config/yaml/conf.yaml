@@ -22,7 +22,7 @@ modules:
           slaveDSN: jdaccountuser:JpdAccUpPwDIr3!#1389@tcp(10.111.21.28:3306)/jdaccountdb?charset=utf8
     sms:
       defaut:
-        queryURL: http://train.17usoft.com/catmessage/reqMsgEx
+      queryURL: http://train.17usoft.com/catmessage/reqMsgEx
 
 services:
   register:
