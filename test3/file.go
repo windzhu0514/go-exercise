@@ -5,20 +5,10 @@ type name struct {
 		DeptCity struct {
 			IsDomestic string `json:"isDomestic"`
 			JcName     string `json:"jcName"`
-			Name       string `json:"name"`
-			SpellName  string `json:"spellName"`
-			Tag        string `json:"tag"`
-			ThreeCode  string `json:"threeCode"`
 		} `json:"deptCity"`
 		DestCities []struct {
 			AirlineFlag string `json:"airlineFlag"`
 			IsDomestic  string `json:"isDomestic"`
-			JcName      string `json:"jcName"`
-			LyRouteID   string `json:"lyRouteId"`
-			Name        string `json:"name"`
-			SpellName   string `json:"spellName"`
-			Tag         string `json:"tag"`
-			ThreeCode   string `json:"threeCode"`
 		} `json:"destCities"`
 	} `json:"airlines"`
 	DeptHotCities []struct {

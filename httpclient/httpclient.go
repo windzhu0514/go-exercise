@@ -16,6 +16,7 @@ import (
 	"net"
 	"net/http"
 	"net/http/cookiejar"
+	"net/http/httptrace"
 	"net/http/httputil"
 	"net/url"
 	"os"
@@ -84,7 +85,7 @@ func NewRequest(rawurl, method string) *HttpRequest {
 	if err != nil {
 		log.Fatal(err)
 	}
-	req := http.Request{
+	req := &http.Request{
 		URL:        u,
 		Method:     method,
 		Header:     make(http.Header),
@@ -92,6 +93,27 @@ func NewRequest(rawurl, method string) *HttpRequest {
 		ProtoMajor: 1,
 		ProtoMinor: 1,
 	}
+
+	trace := &httptrace.ClientTrace{
+		GetConn: func(hostPort string) {
+			fmt.Printf("GetConn Conn: %s\n", hostPort)
+		},
+		GotConn: func(connInfo httptrace.GotConnInfo) {
+			fmt.Printf("Got Conn: %+v\n", connInfo)
+		},
+		PutIdleConn: func(err error) {
+			fmt.Printf("PutIdleConn: %+v\n", err)
+		},
+		ConnectStart: func(network, addr string) {
+			fmt.Printf("ConnectStart: %s %s %+v\n", network, addr, err)
+		},
+		ConnectDone: func(network, addr string, err error) {
+			fmt.Printf("ConnectDone: %s %s %+v\n", network, addr, err)
+		},
+	}
+
+	req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
+
 	return &HttpRequest{
 		url:     rawurl,
 		req:     &req,
