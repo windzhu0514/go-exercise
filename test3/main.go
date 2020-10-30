@@ -1,61 +1,28 @@
 package main
 
 import (
-	"fmt"
-	"go/parser"
-	"go/token"
-	"math/rand"
+	"log"
+	"net/http"
+	"os"
+
+	"github.com/fvbock/endless"
+	"github.com/gorilla/mux"
 )
 
+func handler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("WORLD!"))
+}
+
 func main() {
-	fset := token.NewFileSet() // positions are relative to fset
+	mux1 := mux.NewRouter()
+	mux1.HandleFunc("/hello", handler).
+		Methods("GET")
 
-	// data, err := ioutil.ReadFile("./test3/file.go")
-	// if err != nil {
-	// 	fmt.Println(err)
-	// 	return
-	// }
-
-	// Parse src but stop after processing the imports.
-	f, err := parser.ParseFile(fset, "./test3/file.go", nil, parser.AllErrors)
+	err := endless.ListenAndServe("localhost:4242", mux1)
 	if err != nil {
-		fmt.Println(err)
-		return
+		log.Println(err)
 	}
+	log.Println("Server on 4242 stopped")
 
-	for _, decl := range f.Decls {
-		fmt.Println(decl)
-	}
-
-}
-
-type param struct {
-}
-
-type resp struct {
-}
-
-func Retry(f func() bool) {
-	for i := 0; i < 3; i++ {
-		if !f() {
-			return
-		}
-	}
-}
-
-func req() (string, error) {
-	var resp string
-	var err error
-	Retry(func() bool {
-		n := rand.Intn(2)
-		if n == 1 {
-			resp = "可以了"
-			return false
-		}
-
-		fmt.Println("retry retry")
-		return true
-	})
-
-	return resp, err
+	os.Exit(0)
 }
